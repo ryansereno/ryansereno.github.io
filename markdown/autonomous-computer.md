@@ -12,7 +12,7 @@ This being the case, I think there is a big opportunity for curating a GUI image
 
 Current state-of-the-art vision and segmentation models- GPT4 vision, LLaVA, SAM, YOLO, etc, all struggle with these tasks (at least before fine-tuning)
 
-![Base SAM struggling to segment UI elements](Autonomous%20Computers%203b7012dd5f094f53b6702f75a272fc36/labeled_copy.png)
+![Base SAM struggling to segment UI elements](./assets/labeled_copy.png)
 
 Base SAM struggling to segment UI elements
 

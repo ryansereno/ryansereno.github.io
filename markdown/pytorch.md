@@ -16,7 +16,7 @@ They have three primary functions:
 
 Here’s we will focus on the calculating of gradients as it is the core mechanism through which neural nets learn.
 
-![Screen-Shot-2017-07-16-at-4.44.08-PM.png](Understanding%20The%20Core%20of%20ML%20Libraries%20%E2%88%82L%20%E2%88%82z%20d8493c14778a41eabb365ed84c81e0fc/Screen-Shot-2017-07-16-at-4.44.08-PM.png)
+![Screen-Shot-2017-07-16-at-4.44.08-PM.png](./assets/Screen-Shot-2017-07-16-at-4.44.08-PM.png)
 
 Neural network 'learning' involves incrementally adjusting the model's parameters, based on the gradient of the loss function.
 

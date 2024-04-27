@@ -10,11 +10,11 @@ Attention and syntax in language synthesis is similar to the van der Waals force
 
 Local interactions give rise to complex emergent properties of the larger system.
 
-![Protein crystallization structure is guided by a multitude of intramolecular forces](Language%20Modeling%20is%20Crystallization%20%E2%9D%84%EF%B8%8F%202d7e55dbac1e481c8427eb38c8251436/protein-shape-forces-bonds-self-assembly-folding-l.jpg)
+![Protein crystallization structure is guided by a multitude of intramolecular forces](./assets/protein-shape-forces-bonds-self-assembly-folding-l.jpg)
 
 Protein crystallization structure is guided by a multitude of intramolecular forces
 
-![Transformer self-attention calculates relevance between tokens](Language%20Modeling%20is%20Crystallization%20%E2%9D%84%EF%B8%8F%202d7e55dbac1e481c8427eb38c8251436/Screenshot_2024-01-19_at_9.22.41_PM.png)
+![Transformer self-attention calculates relevance between tokens](./assets/Screenshot_2024-01-19_at_9.22.41_PM.png)
 
 Transformer self-attention calculates relevance between tokens
 

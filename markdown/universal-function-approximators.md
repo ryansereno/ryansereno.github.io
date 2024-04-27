@@ -8,7 +8,7 @@ But what does that mean?
 
 Consider the graph of the function $y = x^2$
 
-![f0db3ea7-ac38-4488-832d-31dc29139bfd.png](Universal%20Function%20Approximators%20%F0%9D%92%99%C2%B2%2072cb85dd811140bd80d5901549fc10b3/f0db3ea7-ac38-4488-832d-31dc29139bfd.png)
+![f0db3ea7-ac38-4488-832d-31dc29139bfd.png](./assets/f0db3ea7-ac38-4488-832d-31dc29139bfd.png)
 
 For any given input 'x', there is a definite, predictable output 'y' that precisely falls on the curve of the graph.
 The function has a single, unchanging relationship between 'x' and 'y'
@@ -30,7 +30,7 @@ Because of this, these functions alone could only model linear data (straight li
 A neural network composed of *only* linear functions could never model the non-linear $x^2$ function.
 No matter how large the network or how long the training, the graph will always be a straight line:
 
-![Figure_1g.png](Universal%20Function%20Approximators%20%F0%9D%92%99%C2%B2%2072cb85dd811140bd80d5901549fc10b3/Figure_1g.png)
+![Figure_1g.png](./assets/Figure_1g.png)
 
 Neural nets are able to model non linear data by using a non-linear activation function, such as ReLU, tanh, sigmoid, etc.
 
@@ -46,7 +46,7 @@ $*N(x) = ReLU(wx + b)*$
 
 Adding the ReLU to only two of the neurons in this neural network yields this graph:
 
-![Figure_1f.png](Universal%20Function%20Approximators%20%F0%9D%92%99%C2%B2%2072cb85dd811140bd80d5901549fc10b3/Figure_1f.png)
+![Figure_1f.png](./assets/Figure_1f.png)
 
 Non-linear activation functions like ReLU allow the line to "bend", hence the name *non-linear*.
 
@@ -56,7 +56,7 @@ A simplified but inuitive explanation is that a nerual network with *n* ReLU neu
 
 Adding additional ReLU neurons adds additional line segments; the line becomes less linear and models the $x^2$ function more closely:
 
-![Figure_1e.png](Universal%20Function%20Approximators%20%F0%9D%92%99%C2%B2%2072cb85dd811140bd80d5901549fc10b3/Figure_1e.png)
+![Figure_1e.png](./assets/Figure_1e.png)
 
 ReLU introduces an element of non-linearity into the network, needed to model non-linear data.
 Without the ReLU, or other non-linear activation, the network could only ever model linear data.

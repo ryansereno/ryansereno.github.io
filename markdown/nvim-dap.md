@@ -4,7 +4,7 @@ Date: March 20, 2024
 
 By integrating `nvim-dap` and `nvim-dap-ui`, you can step through code, inspect variables, and evaluate expressions directly within Neovim.
 
-![dapper.png](How%20to%20Debug%20ASP%20NET%20Projects%20in%20Neovim%20c626d51c8aa1442288409d7690661d02/dapper.png)
+![dapper.png](./assets/dapper.png)
 
 *There are already numerous tutorials on getting nvim-dap working.
 I highly recommend taking a look at these videos first:*

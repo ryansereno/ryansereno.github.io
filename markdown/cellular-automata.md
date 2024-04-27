@@ -18,7 +18,7 @@ This concept can be roughly modeled with particle simulations.
 In a simulation, entities- pixels, points, graphs, vertices, etc- are given a set of arbitrary rules.
 These rules can spontaneously produce order out of a stochastic system.
 
-![winged-automata.gif](Cellular%20Automata%20%E4%B7%BE%20f0422a7f9a444d12be7c5acc1d601e59/winged-automata.gif)
+![winged-automata.gif](./assets/winged-automata.gif)
 
 ```js
 rule(green, green, -0.32);

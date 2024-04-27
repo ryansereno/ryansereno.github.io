@@ -4,6 +4,7 @@ import { defineConfig } from "vitepress";
 export default defineConfig({
   title: "Ryan Sereno",
   description: "A VitePress Site",
+  srcDir: 'markdown',
   markdown: {
     math: true,
     theme: {

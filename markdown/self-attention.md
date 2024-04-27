@@ -76,7 +76,7 @@ Positional embeddings consist of a predictable consecutive pattern, usually from
 
 The positional embedding vector consists of alternating sine and cosine values:
 
-![staggered positional encoding.png](Understanding%20Transformer%20Self-Attention%20%F0%9F%92%AC%2092549bed7ad84157bd65f9708f43c3a2/staggered_positional_encoding.png)
+![staggered positional encoding.png](./assets/staggered_positional_encoding.png)
 
 Each token will get a positional embedding the same size as its token embedding.
 
