@@ -11,7 +11,7 @@ features:
     details: A comprehensive collection of Vim commands
     link: /my-curated-vim-command-collection
     icon:
-        src: /vim-logo/vim-logo-png-transparent.png
+        src: /assets/vim-logo-png-transparent.png
   - title: Cellular Automata ䷾
     details: A study of complex systems and patterns emerging from simple rules.
     link: /cellular-automata
