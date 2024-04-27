@@ -1,0 +1,29 @@
+/* .vitepress/theme/custom.css */
+@font-face {
+  font-family: "ClassicXtraRound";
+  src: url("/assets/ClassicXtraRound-Medium.ttf") format("truetype");
+  font-weight: medium;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Cascursive";
+  src: url("/assets/Cascursive Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Cascursive";
+  src: url("/assets/Cascursive Italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --vp-font-family-base: "ClassicXtraRound", sans-serif; /* Set as the base font */
+  --vp-font-family-mono: "Cascursive", monospace;
+}
+
+/* Code block */
+pre.shiki.shiki-themes.catppuccin-macchiato.night-owl.vp-code {
+  background-color: rgb(1, 22, 39) !important;
+}
