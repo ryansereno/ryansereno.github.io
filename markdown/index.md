@@ -12,6 +12,9 @@ features:
     link: /my-curated-vim-command-collection
     icon:
       src: /assets/vim-logo.png
+    tags:
+     - software
+     - vim
   - title: Cellular Automata ䷾
     details: A study of complex systems and patterns emerging from simple rules.
     link: /cellular-automata
