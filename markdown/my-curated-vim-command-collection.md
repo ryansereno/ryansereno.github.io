@@ -3,7 +3,7 @@
 Date: August 30, 2022
 
 <p align="center">
-    <img src="./assets/vim-logo-png-transparent.png" alt="vim-logo-png-transparent.png" width="100px" />
+    <img src="./assets/vim-logo.png" alt="vim-logo-png-transparent.png" width="100px" />
 </p>
 
 ## **Recording and Repeating Commands**

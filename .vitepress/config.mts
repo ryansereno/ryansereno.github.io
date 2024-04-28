@@ -1,10 +1,12 @@
 import { defineConfig } from "vitepress";
+import { fileURLToPath, URL } from "node:url";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "Ryan Sereno",
   description: "A VitePress Site",
-  srcDir: 'markdown',
+  srcDir: "markdown",
+  //mpa: true,
   markdown: {
     math: true,
     theme: {
@@ -15,18 +17,18 @@ export default defineConfig({
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: "Home", link: "/" },
+      //{ text: "Home", link: "/" },
       //{ text: "Examples", link: "/markdown-examples" },
     ],
 
     sidebar: [
-//      {
-//        text: "Examples",
-//        items: [
-//          { text: "Markdown Examples", link: "/markdown-examples" },
-//          { text: "Runtime API Examples", link: "/api-examples" },
-//        ],
-//      },
+      //      {
+      //        text: "Examples",
+      //        items: [
+      //          { text: "Markdown Examples", link: "/markdown-examples" },
+      //          { text: "Runtime API Examples", link: "/api-examples" },
+      //        ],
+      //      },
     ],
 
     socialLinks: [
@@ -52,5 +54,17 @@ export default defineConfig({
         ],
       ];
     }
+  },
+  vite: {
+    resolve: {
+      alias: [
+        {
+          find: /^.*\/VPFeatures\.vue$/,
+          replacement: fileURLToPath(
+            new URL("../components/ArticleList.vue", import.meta.url),
+          ),
+        },
+      ],
+    },
   },
 });
