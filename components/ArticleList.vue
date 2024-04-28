@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import type { DefaultTheme } from "vitepress/theme";
-import { computed } from "vue";
 
 export interface Feature {
   icon?: DefaultTheme.FeatureIcon;
@@ -23,7 +22,7 @@ const props = defineProps<{
     <div class="container">
       <ul class="items">
         <li v-for="feature in features" :key="feature.title" class="item">
-          {{ feature.title }}
+          <a :href="feature.link" rel="noreferrer">{{ feature.title }}</a>
         </li>
       </ul>
     </div>
