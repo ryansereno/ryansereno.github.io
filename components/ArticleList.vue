@@ -22,7 +22,10 @@ const props = defineProps<{
     <div class="container">
       <ul class="items">
         <li v-for="feature in features" :key="feature.title" class="item">
-          <a :href="feature.link" rel="noreferrer">{{ feature.title }}</a>
+          <a :href="feature.link" rel="noreferrer"
+            >{{ feature.title }}
+            <Badge v-for="tag in feature.tags" type="tip" :text="tag" />
+          </a>
         </li>
       </ul>
     </div>
@@ -67,7 +70,7 @@ const props = defineProps<{
     background-color 0.3s ease-in-out;
 }
 .item:hover {
-  transform: scale(1.01);
+  transform: scale(1.005);
   cursor: pointer;
 }
 

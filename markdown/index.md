@@ -6,15 +6,14 @@ hero:
   text: "Hey, I'm Ryan 👋"
   tagline: "I write about machine learning, art, and frugality"
 
+#tags: software, machine learning, art, frugality, writing, vim, philosophy
+
 features:
   - title: My Curated 𝑽im Command Collection
     details: A comprehensive collection of Vim commands
     link: /my-curated-vim-command-collection
     icon:
       src: /assets/vim-logo.png
-    tags:
-     - software
-     - vim
   - title: Cellular Automata ䷾
     details: A study of complex systems and patterns emerging from simple rules.
     link: /cellular-automata
@@ -48,4 +47,6 @@ features:
   - title: How to Debug ASP.NET Projects in Neo𝑽im
     details: Setup nvim-dap to debug ASP.NET projects.
     link: /nvim-dap
+  - title: The Orchard 🍊
+    link: /the-orchard
 ---
