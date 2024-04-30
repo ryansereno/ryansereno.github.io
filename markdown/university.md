@@ -1,7 +1,5 @@
 # How to go to University 🎓
 
-Date: January 19, 2024
-
 University is a major financial undertaking and often has poor returns.
 
 These are my set of guidelines I wish I could share with my younger self:

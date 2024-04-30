@@ -1,3 +1,7 @@
+---
+aside: true
+---
+
 # My Curated 𝑽im Command Collection
 
 Date: August 30, 2022

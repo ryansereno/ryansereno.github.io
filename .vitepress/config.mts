@@ -35,6 +35,7 @@ export default defineConfig({
       { icon: "github", link: "https://github.com/ryansereno" },
       { icon: "twitter", link: "https://twitter.com/ry_serene" },
     ],
+    aside: false,
   },
   transformHead({ assets }) {
     const myFontFile = assets.find(
