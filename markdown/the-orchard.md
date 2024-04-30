@@ -1,6 +1,10 @@
+---
+aside: false
+---
+
 <h1 align="center">The Orchard</h1>
 
-<span style="font-size: 2em;">S</span>he would play for hours in the orchard, dancing around under the dense canopy. Her own little forest, just tall enough for her to race under the low hanging fruit.
+<span class="dropcap">S</span>he would play for hours in the orchard, dancing around under the dense canopy. Her own little forest, just tall enough for her to race under the low hanging fruit.
 
 Sarah Duval was the daughter of a fruit farmer. She lived in a small home at the end of a long dirt drive lined by fruit trees. Beyond the ancient rusted plows and tractor engines that surrounded the house were seemingly endless rows of trees- tangelo, clementine, tangor, and satsuma.
 

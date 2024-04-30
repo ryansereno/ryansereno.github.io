@@ -1,8 +1,13 @@
+---
+aside: false
+---
+
 # Religion is an Abstraction ✝
 
-Date: January 17, 2024
-
 In software, there is the concept of abstraction.
+
+Abstraction is the process of exposing only the essential features of a complex system while hiding its internal implementation details, allowing developers to interact with it in a simplified way.
+
 Low level abstraction is closer to the actual electrical activity of the semiconductors.
 
 Machine language is the lowest level of abstraction a programmer can get.

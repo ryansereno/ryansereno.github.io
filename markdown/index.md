@@ -3,8 +3,8 @@
 layout: home
 
 hero:
-  text: "Hey, I'm Ryan 👋"
-  tagline: "I write about machine learning, art, and frugality"
+  #text: "Hey, I'm Ryan 👋"
+  tagline: "I write about software, machine learning, art, poetry, and frugality"
 
 #tags: software, machine learning, art, frugality, writing, vim, philosophy
 
@@ -49,4 +49,6 @@ features:
     link: /nvim-dap
   - title: The Orchard 🍊
     link: /the-orchard
+  - title: The Encyclopedias 📚
+    link: /the-encyclopedias
 ---

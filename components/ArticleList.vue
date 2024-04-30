@@ -23,6 +23,7 @@ const props = defineProps<{
       <ul class="items">
         <li v-for="feature in features" :key="feature.title" class="item">
           <a :href="feature.link" rel="noreferrer"
+		  style="display:block; width: 100%;"
             >{{ feature.title }}
             <Badge v-for="tag in feature.tags" type="tip" :text="tag" />
           </a>
