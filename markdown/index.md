@@ -51,5 +51,4 @@ features:
     link: /the-orchard
   - title: The Encyclopedias 📚
     link: /the-encyclopedias
-  - title: test
 ---
