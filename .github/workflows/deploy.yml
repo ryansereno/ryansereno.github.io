@@ -32,5 +32,5 @@ jobs:
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./dist  # Directory where your build outputs are placed
+        publish_dir: ./.viteconfig/dist  # Directory where your build outputs are placed
 
