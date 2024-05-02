@@ -28,9 +28,6 @@ jobs:
     - name: Build
       run: npm run docs:build  # Run the build script defined in package.json
 
-    - name: Copy CNAME
-      run: cp CNAME ./CNAME
-
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
