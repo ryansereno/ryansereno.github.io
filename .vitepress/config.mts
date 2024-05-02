@@ -4,7 +4,8 @@ import { fileURLToPath, URL } from "node:url";
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "Ryan Sereno",
-  description: "A VitePress Site",
+  description: "I write about Software, Art, Poetry, and Frugality",
+  image: "https://www.notion.so/images/page-cover/rijksmuseum_mignons_1660.jpg",
   srcDir: "markdown",
   //mpa: true,
   markdown: {
