@@ -15,17 +15,66 @@ export interface Feature {
 const props = defineProps<{
   features: Feature[];
 }>();
+
+const softwareArticles = props.features.filter(
+  (feature) => feature.tags?.includes("software"),
+);
+const creativeArticles = props.features.filter(
+  (feature) => feature.tags?.includes("poetry"),
+);
+const otherArticles = props.features.filter(
+  (feature) => feature.tags?.includes("philosophy"),
+);
 </script>
 
 <template>
   <div v-if="features" class="VPFeatures">
     <div class="container">
       <ul class="items">
-        <li v-for="feature in features" :key="feature.title" class="item">
-          <a :href="feature.link" rel="noreferrer"
-		  style="display:block; width: 100%;"
+        <i style="color: gray">Software and ML</i>
+        <li
+          v-for="feature in softwareArticles"
+          :key="feature.title"
+          class="item"
+        >
+          <a
+            :href="feature.link"
+            rel="noreferrer"
+            style="display: block; width: 100%"
             >{{ feature.title }}
-            <Badge v-for="tag in feature.tags" type="tip" :text="tag" />
+            <!--<Badge v-for="tag in feature.tags" type="tip" :text="tag" />-->
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="container">
+      <ul class="items">
+        <i style="color: gray">Poetry and Stories</i>
+        <li
+          v-for="feature in creativeArticles"
+          :key="feature.title"
+          class="item"
+        >
+          <a
+            :href="feature.link"
+            rel="noreferrer"
+            style="display: block; width: 100%"
+            >{{ feature.title }}
+            <!--<Badge v-for="tag in feature.tags" type="tip" :text="tag" />-->
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="container">
+      <ul class="items">
+        <i style="color: gray">Other</i>
+        <li v-for="feature in otherArticles" :key="feature.title" class="item">
+          <a
+            :href="feature.link"
+            rel="noreferrer"
+            style="display: block; width: 100%"
+            >{{ feature.title }}
+            <!--<Badge v-for="tag in feature.tags" type="tip" :text="tag" />-->
           </a>
         </li>
       </ul>
@@ -54,6 +103,7 @@ const props = defineProps<{
 .container {
   margin: 0 auto;
   max-width: 1152px;
+  margin-bottom: 24px;
 }
 
 .items {
