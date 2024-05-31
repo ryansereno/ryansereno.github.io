@@ -114,7 +114,7 @@ const otherArticles = props.features.filter(
 }
 
 .item {
-  padding: 4px;
+  padding: 2px;
   width: 100%;
   transition:
     transform 0.3s ease-in-out,
