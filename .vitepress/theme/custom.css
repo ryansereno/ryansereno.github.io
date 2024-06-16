@@ -20,7 +20,7 @@
 
 :root {
   /*Main Fonts*/
-  --vp-font-family-base: "ClassicXtraRound", sans-serif;
+  --vp-font-family-base: "ClassicXtraRound", serif;
   --vp-font-family-mono: "Cascursive", monospace;
 
   /* Chip Colors */
