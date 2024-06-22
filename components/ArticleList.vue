@@ -30,28 +30,22 @@ const categories = {
 </script>
 
 <template>
-  <div v-if="features.length > 0" class="VPFeatures">
-    <div
-      v-for="(articles, category) in categories"
-      :key="category"
-      class="container"
-    >
-      <ul class="items">
-        <i :style="{ color: 'gray' }">{{ category }}</i>
-        <li v-for="feature in articles" :key="feature.title" class="item">
-          <a
-            :href="feature.link"
-            rel="noreferrer noopener"
-            style="display: block; width: 100%"
-          >
-            {{ feature.title }}
-            <!-- Uncomment if you want to display tags as badges -->
-            <!-- <Badge v-for="tag in feature.tags" :key="tag" type="tip" :text="tag" /> -->
-          </a>
-        </li>
-      </ul>
-      <br />
-    </div>
+  <div v-for="(articles, category) in categories" :key="category">
+    <ul class="items">
+      <i :style="{ color: 'gray' }">{{ category }}</i>
+      <li v-for="feature in articles" :key="feature.title" class="item">
+        <a
+          :href="feature.link"
+          rel="noreferrer noopener"
+          style="display: block; width: 100%"
+        >
+          {{ feature.title }}
+          <!-- Uncomment if you want to display tags as badges -->
+          <!-- <Badge v-for="tag in feature.tags" :key="tag" type="tip" :text="tag" /> -->
+        </a>
+      </li>
+    </ul>
+    <br />
   </div>
 </template>
 
@@ -71,11 +65,6 @@ const categories = {
   .VPFeatures {
     padding: 0 64px;
   }
-}
-
-.container {
-  margin: 0 auto;
-  max-width: 600px;
 }
 
 .items {

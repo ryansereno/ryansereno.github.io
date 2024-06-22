@@ -1,20 +1,22 @@
 <template>
-  <div class="hero">
-    <p style="line-height: 36px; max-width: 576px; opacity: 0.7">
-      I write about software, machine learning
-      <img
-        style="height: 24px; display: inline; vertical-align: middle"
-        src="../markdown/assets/loss-gradient.png"
-      />, art
-      <img
-        style="height: 30px; display: inline; vertical-align: middle"
-        src="../markdown/assets/framed-painting.png"
-      />,
-      <span style="font-family: cursive">poetry,</span>
-      and frugality.
-    </p>
+  <div class="container">
+    <div class="hero">
+      <p style="line-height: 36px; max-width: 576px; opacity: 0.7">
+        I write about software, machine learning
+        <img
+          style="height: 24px; display: inline; vertical-align: middle"
+          src="../markdown/assets/loss-gradient.png"
+        />, art
+        <img
+          style="height: 30px; display: inline; vertical-align: middle"
+          src="../markdown/assets/framed-painting.png"
+        />,
+        <span style="font-family: cursive">poetry,</span>
+        and frugality.
+      </p>
+    </div>
+    <ArticleList :features="frontmatter.features" />
   </div>
-  <ArticleList :features="frontmatter.features" />
 </template>
 
 <script setup>
@@ -27,17 +29,20 @@ const { frontmatter } = useData();
 <style scoped>
 .hero {
   font-size: 20px;
-  padding-top: 75px;
-  padding-bottom: 50px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+.container {
   margin: 0 auto;
   max-width: 600px;
-  padding: 24px;
+  padding: 0 24px;
 }
 @media (min-width: 640px) {
   .hero {
-    padding-left: 0;
-    padding-right: 0;
     font-size: 24px;
+  }
+  .container {
+    padding: 0 0;
   }
 }
 </style>
