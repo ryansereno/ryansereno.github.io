@@ -16,68 +16,41 @@ const props = defineProps<{
   features: Feature[];
 }>();
 
-const softwareArticles = props.features.filter(
-  (feature) => feature.tags?.includes("software"),
-);
-const creativeArticles = props.features.filter(
-  (feature) => feature.tags?.includes("poetry"),
-);
-const otherArticles = props.features.filter(
-  (feature) => feature.tags?.includes("philosophy"),
-);
+const categories = {
+  "Software and ML": props.features.filter(
+    (feature) => feature.tags?.includes("software"),
+  ),
+  "Poetry and Stories": props.features.filter(
+    (feature) => feature.tags?.includes("poetry"),
+  ),
+  Other: props.features.filter(
+    (feature) => feature.tags?.includes("philosophy"),
+  ),
+};
 </script>
 
 <template>
-  <div v-if="features" class="VPFeatures">
-    <div class="container">
+  <div v-if="features.length > 0" class="VPFeatures">
+    <div
+      v-for="(articles, category) in categories"
+      :key="category"
+      class="container"
+    >
       <ul class="items">
-        <i style="color: gray">Software and ML</i>
-        <li
-          v-for="feature in softwareArticles"
-          :key="feature.title"
-          class="item"
-        >
+        <i :style="{ color: 'gray' }">{{ category }}</i>
+        <li v-for="feature in articles" :key="feature.title" class="item">
           <a
             :href="feature.link"
-            rel="noreferrer"
+            rel="noreferrer noopener"
             style="display: block; width: 100%"
-            >{{ feature.title }}
-            <!--<Badge v-for="tag in feature.tags" type="tip" :text="tag" />-->
+          >
+            {{ feature.title }}
+            <!-- Uncomment if you want to display tags as badges -->
+            <!-- <Badge v-for="tag in feature.tags" :key="tag" type="tip" :text="tag" /> -->
           </a>
         </li>
       </ul>
-    </div>
-    <div class="container">
-      <ul class="items">
-        <i style="color: gray">Poetry and Stories</i>
-        <li
-          v-for="feature in creativeArticles"
-          :key="feature.title"
-          class="item"
-        >
-          <a
-            :href="feature.link"
-            rel="noreferrer"
-            style="display: block; width: 100%"
-            >{{ feature.title }}
-            <!--<Badge v-for="tag in feature.tags" type="tip" :text="tag" />-->
-          </a>
-        </li>
-      </ul>
-    </div>
-    <div class="container">
-      <ul class="items">
-        <i style="color: gray">Other</i>
-        <li v-for="feature in otherArticles" :key="feature.title" class="item">
-          <a
-            :href="feature.link"
-            rel="noreferrer"
-            style="display: block; width: 100%"
-            >{{ feature.title }}
-            <!--<Badge v-for="tag in feature.tags" type="tip" :text="tag" />-->
-          </a>
-        </li>
-      </ul>
+      <br />
     </div>
   </div>
 </template>
@@ -102,15 +75,13 @@ const otherArticles = props.features.filter(
 
 .container {
   margin: 0 auto;
-  max-width: 1152px;
-  margin-bottom: 24px;
+  max-width: 600px;
 }
 
 .items {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  margin: -8px;
 }
 
 .item {
