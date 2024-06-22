@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="hero">
-      <p style="line-height: 36px; max-width: 576px; opacity: 0.7">
+      <p style="line-height: 36px; max-width: 576px">
         I write about software, machine learning
         <img
           style="height: 24px; display: inline; vertical-align: middle"
@@ -13,6 +13,12 @@
         />,
         <span style="font-family: cursive">poetry,</span>
         and frugality.
+      </p>
+      <p style="font-size: 0.7em; opacity: 0.7; padding-top: 0.7em">
+        <i
+          >Art, Science, and Software are the true manifestations of the magic
+          we dreamed of as children.</i
+        >
       </p>
     </div>
     <ArticleList :features="frontmatter.features" />
