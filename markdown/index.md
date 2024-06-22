@@ -2,10 +2,6 @@
 # https://vitepress.dev/reference/default-theme-home-page
 layout: home
 
-hero:
-  #text: "Hey, I'm Ryan 👋"
-  tagline: "I write about software, machine learning, art, poetry, and frugality"
-
 #tags: software, machine learning, art, frugality, writing, vim, philosophy
 
 features:

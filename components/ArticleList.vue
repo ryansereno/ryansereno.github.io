@@ -24,7 +24,8 @@ const categories = {
     (feature) => feature.tags?.includes("poetry"),
   ),
   Other: props.features.filter(
-    (feature) => feature.tags?.includes("philosophy"),
+    (feature) =>
+      !(feature.tags?.includes("software") || feature.tags?.includes("poetry")),
   ),
 };
 </script>
