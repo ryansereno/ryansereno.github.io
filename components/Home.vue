@@ -5,10 +5,12 @@
         I write about software, machine learning
         <img
           style="height: 24px; display: inline; vertical-align: middle"
+          alt="loss-gradient"
           src="../markdown/assets/loss-gradient.png"
         />, art
         <img
           style="height: 30px; display: inline; vertical-align: middle"
+          alt="framed-painting"
           src="../markdown/assets/framed-painting.png"
         />,
         <span style="font-family: cursive">poetry,</span>
