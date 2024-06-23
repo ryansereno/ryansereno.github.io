@@ -1,8 +1,7 @@
 # Understanding The Core of ML Libraries ∂L/∂z
 
-Date: June 24, 2023
-
-This is a Work in Progress
+::: tip This article is a work in progress
+:::
 
 ML libraries like TensorFlow and PyTorch can feel overwhelming
 
@@ -10,7 +9,7 @@ But their core purpose is simple.
 
 They have three primary functions:
 
-- Create/ handle tensors
+- Create tensors and handle operations on them
 - Calculate gradients
 - Provide an optimizer (optional)
 

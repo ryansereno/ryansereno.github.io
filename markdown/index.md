@@ -19,7 +19,7 @@ features:
     details: Insights into the mathematical models that underpin machine learning algorithms.
     link: /universal-function-approximators
     tags: [software]
-  - title: Replacing a Vue 2 Event Bus with Pinia🍍
+  - title: Replacing a Vue Event Bus with Pinia🍍
     details: Guidance on transitioning from Vue 2's event bus to state management with Pinia.
     link: /vue-event-bus
     tags: [software]

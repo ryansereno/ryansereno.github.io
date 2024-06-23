@@ -2,7 +2,8 @@
 
 Date: September 5, 2023
 
-This is a Work in Progress
+::: tip This article is a work in progress
+:::
 
 Self attention is the underlying principle of the Transformer architecture.
 
