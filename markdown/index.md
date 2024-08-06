@@ -63,5 +63,8 @@ features:
     tags: [poetry]
   - title: Reclaim Your Media 🏴‍☠️
     link: /reclaim-your-media
-    tags: [software]
+    tags: [other]
+  - title: Intellectual Property Is Dead 💀
+    link: /intellectual-property
+    tags: [other]
 ---
