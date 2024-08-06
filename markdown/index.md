@@ -61,4 +61,7 @@ features:
   - title: The Encyclopedias 📚
     link: /the-encyclopedias
     tags: [poetry]
+  - title: Reclaim Your Media 🏴‍☠️
+    link: /reclaim-your-media
+    tags: [software]
 ---
