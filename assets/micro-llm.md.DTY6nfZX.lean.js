@@ -1,1 +1,0 @@
-import{_ as i,c as s,o as a,M as t}from"./chunks/framework.Dt16nE2a.js";const g=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"micro-llm.md","filePath":"micro-llm.md"}'),h={name:"micro-llm.md"},n=t("",26),k=[n];function l(p,e,r,D,A,d){return a(),s("div",null,k)}const E=i(h,[["render",l]]);export{g as __pageData,E as default};
