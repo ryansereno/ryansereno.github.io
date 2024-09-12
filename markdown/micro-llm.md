@@ -211,7 +211,7 @@ I really handicapped myself by writing my serial communication from scratch;
 It was a pain figuring out if my problems were math, memory management or data transfer related (turns out it was the latter..)
 
 After several iterations of deleting and restarting from my basic multiplication example, I finally got my tests to pass on square matrices, and then finally matrices of varying dimensions.
-![[matrix-multiply.png]]
+![](./assets/matrix-multiply.png)
 This is where I ran into my first concrete roadblock; the one that I understood most easily from the beginning: The atmega328p has 2kB of RAM/ volatile memory.
 
 This means it can hold a theoretical maximum of 2048 int8 values, or about one 45x45 int8 matrix. 
@@ -228,4 +228,4 @@ My next goal was to scale the mat-mult as far as I could using memory offloading
 
 The ATmega does not have dedicated Floating Point math hardware but can do floating point math through software, which can take several hundred clock cycles to complete a simple operation.
 
-While matrix multiplication can be broken down into piece-wise operations, there are ops where an entire row or matrix needs to be in memory, like softmax.![](Signal%20Note%20to%20Self%20-%202024-09-05%2008_15_12.jpeg)
+While matrix multiplication can be broken down into piece-wise operations, there are ops where an entire row or matrix needs to be in memory, like softmax.![](./assets/Signal%20Note%20to%20Self%20-%202024-09-05%2008_15_12.jpeg)

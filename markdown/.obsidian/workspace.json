@@ -23,9 +23,11 @@
             "id": "2e44989831b36dea",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "assets/Signal Note to Self - 2024-09-05 08_15_12.jpeg"
+                "file": "micro-llm.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -49,7 +51,7 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
+                "sortOrder": "byModifiedTime"
               }
             }
           },
@@ -96,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "assets/Signal Note to Self - 2024-09-05 08_15_12.jpeg",
+                "file": "micro-llm.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "assets/Signal Note to Self - 2024-09-05 08_15_12.jpeg",
+                "file": "micro-llm.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -136,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "assets/Signal Note to Self - 2024-09-05 08_15_12.jpeg"
+                "file": "micro-llm.md"
               }
             }
           }
@@ -159,8 +161,8 @@
   },
   "active": "2e44989831b36dea",
   "lastOpenFiles": [
-    "micro-llm.md",
     "assets/Signal Note to Self - 2024-09-05 08_15_12.jpeg",
+    "micro-llm.md",
     "assets/matrix-multiply.png",
     "pytorch.md",
     "assets/simple-multiply.png",
