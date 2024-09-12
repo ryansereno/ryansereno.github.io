@@ -5,6 +5,9 @@ layout: home
 #tags: software, machine learning, art, frugality, writing, vim, philosophy
 
 features:
+  - title: LLM on an 8bit Microcontroller 🧠
+    link: /micro-llm
+    tags: [software]
   - title: My Curated 𝑽im Command Collection
     details: A comprehensive collection of Vim commands
     link: /my-curated-vim-command-collection
