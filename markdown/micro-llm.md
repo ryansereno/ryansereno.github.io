@@ -111,7 +111,7 @@ I setup everything under the assumption that I would eventually be using an 8bit
 This enables me to work primarily with signed integers (ranging from -128 to 127), instead of floating point numbers.
 I used the int8 data type and shifted values to be between -128 and 127.
 Outputs can overflow into the 16bit range.
-![[simple-multiply.png]]
+![simple-multiply.png](./assets/simple-multiply.png)
 Once this was working, and the validation tests were passing, I felt comfortable expanding this to matrix multiplication.
 ## Part 2: Matrix Multiplication
 If I could multiply two numbers, I felt it would be pretty straightforward to extend it to a matrix.
