@@ -228,4 +228,4 @@ My next goal was to scale the mat-mult as far as I could using memory offloading
 
 The ATmega does not have dedicated Floating Point math hardware but can do floating point math through software, which can take several hundred clock cycles to complete a simple operation.
 
-While matrix multiplication can be broken down into piece-wise operations, there are ops where an entire row or matrix needs to be in memory, like softmax.
+While matrix multiplication can be broken down into piece-wise operations, there are ops where an entire row or matrix needs to be in memory, like softmax.![](Signal%20Note%20to%20Self%20-%202024-09-05%2008_15_12.jpeg)

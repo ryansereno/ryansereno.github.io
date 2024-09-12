@@ -1,4 +1,6 @@
 {
   "showInlineTitle": false,
-  "vimMode": true
+  "vimMode": true,
+  "useMarkdownLinks": true,
+  "attachmentFolderPath": "assets"
 }

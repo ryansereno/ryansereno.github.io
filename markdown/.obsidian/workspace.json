@@ -23,11 +23,9 @@
             "id": "2e44989831b36dea",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "micro-llm.md",
-                "mode": "source",
-                "source": false
+                "file": "assets/Signal Note to Self - 2024-09-05 08_15_12.jpeg"
               }
             }
           }
@@ -98,7 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "micro-llm.md",
+                "file": "assets/Signal Note to Self - 2024-09-05 08_15_12.jpeg",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +113,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "micro-llm.md",
+                "file": "assets/Signal Note to Self - 2024-09-05 08_15_12.jpeg",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +136,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "micro-llm.md"
+                "file": "assets/Signal Note to Self - 2024-09-05 08_15_12.jpeg"
               }
             }
           }
@@ -161,8 +159,10 @@
   },
   "active": "2e44989831b36dea",
   "lastOpenFiles": [
-    "pytorch.md",
     "micro-llm.md",
+    "assets/Signal Note to Self - 2024-09-05 08_15_12.jpeg",
+    "assets/matrix-multiply.png",
+    "pytorch.md",
     "assets/simple-multiply.png",
     "intellectual-property.md",
     "cellular-automata.md",
