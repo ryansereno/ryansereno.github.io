@@ -2,13 +2,17 @@
 :::
 
 I took a weekend and tried to get an LLM running on an 8bit microcontroller- the ATmega328p in particular.
+
 This was of course an exercise in futility that turned into a simpler ambition of getting matrix multiplication working on the chip
+
 But I wanted to take this as far as possible so I could understand, at a fundamental level, what the minimum resources are to run one of these models.
 
 >“What I cannot build, I do not understand” -Feynman
 ## Part 1: Setting up a math validation tool
 I wanted to start simple to see what math I could feasibly do on the chip; that meant multiplying just two numbers.
+
 The easiest way to do this was to input numbers to a computer, send to the chip for calculation, get the result back, and validate it against an actual math library.
+
 I did this through a basic python client, and serial communication.
 
 Python client:
@@ -108,16 +112,24 @@ int main(void) {
 ```
 
 I setup everything under the assumption that I would eventually be using an 8bit quantized model.
+
 This enables me to work primarily with signed integers (ranging from -128 to 127), instead of floating point numbers.
+
 I used the int8 data type and shifted values to be between -128 and 127.
+
 Outputs can overflow into the 16bit range.
+
 ![simple-multiply.png](./assets/simple-multiply.png)
 Once this was working, and the validation tests were passing, I felt comfortable expanding this to matrix multiplication.
 ## Part 2: Matrix Multiplication
 If I could multiply two numbers, I felt it would be pretty straightforward to extend it to a matrix.
+
 I started with 2D matrices.
+
 For the sake of simplicity, I flattened 2D matrices into 1D arrays.
+
 This enabled memory to be easily allocated and accessed in contiguous blocks.
+
 Indexing into a value can be done with with: `matrix[i * size + k]` Where `i` is the row index, `size` is the column dimension, and `k` is the column index
 
 For the matrix multiplication "kernel'", I used a brute force loop approach, borrowed from [here](https://forum.arduino.cc/t/arduino-matrix-math-library/38123).
@@ -138,7 +150,9 @@ void matmult(int8_t *A, int8_t *B, int16_t *C, uint8_t rows_A,
 ```
 
 Because the values are stored inside of 1D arrays the dimensions of the matrices need to be explicitly passed in. 
+
 I generated matrices with numpy, and used `np.array_equal()` to validate the results returned by the chip.
+
 Python client:
 ```python
 import time
@@ -208,30 +222,40 @@ print("Connection closed.")
 It took several hours of debugging to get this working; the math was wrong every time.
 
 I really handicapped myself by writing my serial communication from scratch; 
+
 It was a pain figuring out if my problems were math, memory management or data transfer related (turns out it was the latter..)
 
 After several iterations of deleting and restarting from my basic multiplication example, I finally got my tests to pass on square matrices, and then finally matrices of varying dimensions.
+
 ![](./assets/matrix-multiply.png)
 This is where I ran into my first concrete roadblock; the one that I understood most easily from the beginning: The atmega328p has 2kB of RAM/ volatile memory.
 
 This means it can hold a theoretical maximum of 2048 int8 values, or about one 45x45 int8 matrix. 
+
 Mat-Mult requires allocation for 3 matrices, the third being int16 or int32 (because mat-mult of large int8 matrices could result in numbers higher than 32,768), so the maximum allowable dimension for each matrix is quite small.
 
 My goal from the beginning was never to run this *entirely* on the ATmega, but to offload memory onto pseudo ram, ie repurposed solid state storage like an SD card.
+
 In my naive outlook, there isn't anything *fundamentally* different about volatile memory and solid state memory, they're both just storing bits somewhere 🤷
+
 Sure there are many differences in speed and how data is accessed, but I felt I could at least implement a toy example for my own curiosity.
 ## Part 3: Memory Offloading
 My next goal was to scale the mat-mult as far as I could using memory offloading; and maybe even simulate the first mat-mult operation of a small Phi model 😅 
 
 I intended on storing runtime memory on an SD card, so I can handle very large matrices.
+
 I found several possible approaches to this- There is the very impractical approach of writing directly at the block level, in 512 byte chunks, with something like the SDFat library.
+
 This appears to require a lot of attention to wear-leveling and block management.
 
 The more feasible approach is to work with a file system abstraction- simply creating and appending to .txt files.
 
 To set this up I extracted the first attention head weights (768 , 768 each) from the GPT2 model.
+
 I also created an embedded+normalized token sequence (7 , 768).
+
 I saved each of these matrices to a binary file.
+
 ![](assets/Screenshot%202024-09-08%20at%201.16.39%20PM.png)
 
 My next goal was to successfully calculate the Q, K, and V matrices with memory offloading/ without overflowing the ATmega's memory.
@@ -243,23 +267,31 @@ My initial approach for memory offloading was as follow:
 - Once all multiplication is complete, open the temp.bin file
 - Read and sum the row chunks, for final mat-mul result
 - Store resulting matrix in an output.bin file
+
 For my 7 token sequence, this would take about 4,128,768 multiplication and write operations, then another 4,128,768 read, addition, and final output write operations;
 just for the Q matrix! 
 
 I will probably eventually need to implement some type of chunking scheme to reduce the read/write ops
 
 Aside:
+
 I had hoped to implement the SD card communication from scratch like I did with the UART communication, but it appears to be a bit more complicated.
+
 Bringing in the arduino SD library would be simpler, but it is leading to a web of other arduino dependencies which I really do not want to bring into this project.
+
 The SD library provides very helpful methods like seek(), so I think it will be indispensable to this project, I just need to get it compiled with avr-gcc/ working outside of the arduino IDE ecosystem
 
 Aside 2:
+
 Interesting note, the SD card library provides these convenient methods- seek(), read(), and write()- that appear to operate on linear chunks of memory, but actually operate through a "Flash Translation Layer" on the SD card.
+
 This abstraction layer translates logical memory addresses to random physical locations on the flash memory, spreading out writes across the card, preventing any one area from wearing out prematurely
 
-It turns out, using the arduino SD card library outside of the arduino ecosystem is impractical, there are just too many extraneous dependencies. So I had to resort to using the arduino-cli instead of avr-gcc
-But I successfully setup the SD card and got basic multiplication working. Now to load in some large matrices
+It turns out, using the arduino SD card library outside of the arduino ecosystem is impractical, there are just too many extraneous dependencies.
 
+So I had to resort to using the arduino-cli instead of avr-gcc
+
+But I successfully setup the SD card and got basic multiplication working. Now to load in some large matrices
 ### A note on quantization
 >Typically only the weights that participate in matmuls are quantized. All the other parameters (e.g. especially the scale and bias in RMSNorm) are kept in float32, because these layers are very sensitive. Here, we go one step further and additionally quantize the activations in the forward pass. This requires us to dynamically quantize and dequantize between float32 and int8 at runtime, which adds overhead. But the benefit is that now the majority of the calculations are using pure integer arithmetic.
 >[Karpathy, discussing llama2.c](https://github.com/karpathy/llama2.c?tab=readme-ov-file#int8-quantization)
