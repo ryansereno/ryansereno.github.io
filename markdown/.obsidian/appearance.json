@@ -1,3 +1,5 @@
 {
-  "accentColor": "#f5825c"
+  "accentColor": "#f5825c",
+  "textFontFamily": "ClassicXtraRound-Medium",
+  "theme": "system"
 }

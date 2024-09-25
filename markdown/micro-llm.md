@@ -223,9 +223,53 @@ Sure there are many differences in speed and how data is accessed, but I felt I 
 ## Part 3: Memory Offloading
 My next goal was to scale the mat-mult as far as I could using memory offloading; and maybe even simulate the first mat-mult operation of a small Phi model 😅 
 
+I intended on storing runtime memory on an SD card, so I can handle very large matrices.
+I found several possible approaches to this- There is the very impractical approach of writing directly at the block level, in 512 byte chunks, with something like the SDFat library.
+This appears to require a lot of attention to wear-leveling and block management.
+
+The more feasible approach is to work with a file system abstraction- simply creating and appending to .txt files.
+
+To set this up I extracted the first attention head weights (768 , 768 each) from the GPT2 model.
+I also created an embedded+normalized token sequence (7 , 768).
+I saved each of these matrices to a binary file.
+![](assets/Screenshot%202024-09-08%20at%201.16.39%20PM.png)
+
+My next goal was to successfully calculate the Q, K, and V matrices with memory offloading/ without overflowing the ATmega's memory.
+
+My initial approach for memory offloading was as follow: 
+- Open weight and input files from the SD
+- Read and multiply element-wise
+- Store the intermediate multiplication values on the SD in a temp.bin file
+- Once all multiplication is complete, open the temp.bin file
+- Read and sum the row chunks, for final mat-mul result
+- Store resulting matrix in an output.bin file
+For my 7 token sequence, this would take about 4,128,768 multiplication and write operations, then another 4,128,768 read, addition, and final output write operations;
+just for the Q matrix! 
+
+I will probably eventually need to implement some type of chunking scheme to reduce the read/write ops
+
+Aside:
+I had hoped to implement the SD card communication from scratch like I did with the UART communication, but it appears to be a bit more complicated.
+Bringing in the arduino SD library would be simpler, but it is leading to a web of other arduino dependencies which I really do not want to bring into this project.
+The SD library provides very helpful methods like seek(), so I think it will be indispensable to this project, I just need to get it compiled with avr-gcc/ working outside of the arduino IDE ecosystem
+
+Aside 2:
+Interesting note, the SD card library provides these convenient methods- seek(), read(), and write()- that appear to operate on linear chunks of memory, but actually operate through a "Flash Translation Layer" on the SD card.
+This abstraction layer translates logical memory addresses to random physical locations on the flash memory, spreading out writes across the card, preventing any one area from wearing out prematurely
+
+It turns out, using the arduino SD card library outside of the arduino ecosystem is impractical, there are just too many extraneous dependencies. So I had to resort to using the arduino-cli instead of avr-gcc
+But I successfully setup the SD card and got basic multiplication working. Now to load in some large matrices
+
+### A note on quantization
 >Typically only the weights that participate in matmuls are quantized. All the other parameters (e.g. especially the scale and bias in RMSNorm) are kept in float32, because these layers are very sensitive. Here, we go one step further and additionally quantize the activations in the forward pass. This requires us to dynamically quantize and dequantize between float32 and int8 at runtime, which adds overhead. But the benefit is that now the majority of the calculations are using pure integer arithmetic.
 >[Karpathy, discussing llama2.c](https://github.com/karpathy/llama2.c?tab=readme-ov-file#int8-quantization)
 
 The ATmega does not have dedicated Floating Point math hardware but can do floating point math through software, which can take several hundred clock cycles to complete a simple operation.
 
 While matrix multiplication can be broken down into piece-wise operations, there are ops where an entire row or matrix needs to be in memory, like softmax.![](./assets/Signal%20Note%20to%20Self%20-%202024-09-05%2008_15_12.jpeg)
+
+## Closing Thoughts
+My main goal in this project was to better understand the minimum requirements necessary to run state-of-the-art language models.
+
+The biggest insight I gained is that <ins>memory is the only constraint</ins>.
+GPU's perform calculation much faster, but they are not strictly necessary.

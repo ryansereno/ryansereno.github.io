@@ -78,7 +78,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -161,12 +162,13 @@
   },
   "active": "2e44989831b36dea",
   "lastOpenFiles": [
+    "assets/Screenshot 2024-09-08 at 1.16.39 PM.png",
+    "intellectual-property.md",
     "assets/Signal Note to Self - 2024-09-05 08_15_12.jpeg",
     "micro-llm.md",
     "assets/matrix-multiply.png",
     "pytorch.md",
     "assets/simple-multiply.png",
-    "intellectual-property.md",
     "cellular-automata.md",
     "the-orchard.md",
     "vue-event-bus.md",
