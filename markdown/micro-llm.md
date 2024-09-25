@@ -8,6 +8,8 @@ This was of course an exercise in futility that turned into a simpler ambition o
 But I wanted to take this as far as possible so I could understand, at a fundamental level, what the minimum resources are to run one of these models.
 
 >“What I cannot build, I do not understand” -Feynman
+
+![](./assets/Signal%20Note%20to%20Self%20-%202024-09-05%2008_15_12.jpeg)
 ## Part 1: Setting up a math validation tool
 I wanted to start simple to see what math I could feasibly do on the chip; that meant multiplying just two numbers.
 
@@ -298,7 +300,7 @@ But I successfully setup the SD card and got basic multiplication working. Now t
 
 The ATmega does not have dedicated Floating Point math hardware but can do floating point math through software, which can take several hundred clock cycles to complete a simple operation.
 
-While matrix multiplication can be broken down into piece-wise operations, there are ops where an entire row or matrix needs to be in memory, like softmax.![](./assets/Signal%20Note%20to%20Self%20-%202024-09-05%2008_15_12.jpeg)
+While matrix multiplication can be broken down into piece-wise operations, there are ops where an entire row or matrix needs to be in memory, like softmax.
 
 ## Closing Thoughts
 My main goal in this project was to better understand the minimum requirements necessary to run state-of-the-art language models.
