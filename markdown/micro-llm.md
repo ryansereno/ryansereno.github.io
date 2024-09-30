@@ -1,6 +1,4 @@
 # LLM on an 8-bit Microcontroller
-::: tip This article is a work in progress
-:::
 
 I took a weekend and tried to get an LLM running on an 8bit microcontroller- the ATmega328p in particular.
 
