@@ -7,7 +7,7 @@ export default defineConfig({
   description: "I write about Software, Art, Poetry, and Frugality",
   image: "https://www.notion.so/images/page-cover/rijksmuseum_mignons_1660.jpg",
   srcDir: "markdown",
-  //mpa: true, //super lightweight no js mode
+  mpa: true, //super lightweight no js mode
   markdown: {
     math: true,
     theme: {
