@@ -18,7 +18,7 @@ The easiest way to do this was to input numbers to a computer, send to the chip 
 
 I did this through a basic python client, and serial communication.
 
-Python client:
+::: details  Python client:
 ```python
 import serial
 import time
@@ -60,6 +60,7 @@ ser.close()
 print("Connection closed.")
 
 ```
+:::
 
 ATmega program:
 ```c
@@ -297,6 +298,7 @@ So I had to resort to using the arduino-cli instead of avr-gcc
 But I successfully setup the SD card and got basic multiplication working. Now to load in some large matrices
 ### A note on quantization
 >Typically only the weights that participate in matmuls are quantized. All the other parameters (e.g. especially the scale and bias in RMSNorm) are kept in float32, because these layers are very sensitive. Here, we go one step further and additionally quantize the activations in the forward pass. This requires us to dynamically quantize and dequantize between float32 and int8 at runtime, which adds overhead. But the benefit is that now the majority of the calculations are using pure integer arithmetic.
+>
 >[Karpathy, discussing llama2.c](https://github.com/karpathy/llama2.c?tab=readme-ov-file#int8-quantization)
 
 The ATmega does not have dedicated Floating Point math hardware but can do floating point math through software, which can take several hundred clock cycles to complete a simple operation.
