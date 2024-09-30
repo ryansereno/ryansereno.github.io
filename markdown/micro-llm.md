@@ -1,4 +1,4 @@
-# LLM on an 8-bit Microcontroller
+# Running an LLM on a $2 Microcontroller
 *Memory is all you need!*
 
 ---
