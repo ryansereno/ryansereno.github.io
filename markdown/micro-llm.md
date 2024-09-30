@@ -157,7 +157,7 @@ Because the values are stored inside of 1D arrays the dimensions of the matrices
 
 I generated matrices with numpy, and used `np.array_equal()` to validate the results returned by the chip.
 
-Python client:
+::: details  Python client:
 ```python
 import time
 import numpy as np
@@ -222,6 +222,7 @@ while True:
 ser.close()
 print("Connection closed.")
 ```
+:::
 
 It took several hours of debugging to get this working; the math was wrong every time.
 
