@@ -12,11 +12,11 @@ But I wanted to take this as far as possible so I could understand, at a fundame
 >“What I cannot build, I do not understand” -Feynman
 
 ![](./assets/Signal%20Note%20to%20Self%20-%202024-09-05%2008_15_12.jpeg)
-::: info
-#### Overview
+::: info Overview
 - Running modern LLM's, even the smallest ones, requires a generous amount of memory, typically on the order of 10's of GB's
 - The ATmega328P is a $2 chip, with 2KB of memory (0.00000025 GB)
 - While the Atmega has none of the parallelism or multi-threading that modern GPU's and CPU's, it is perfectly capable of performing basic integer math
+- Similar to how RAM works in computers and GPU's, we can expand the working memory of the ATmega with an SD card
 :::
 ## Part 1: Setting up a math validation tool
 I wanted to start simple to see what math I could feasibly do on the chip; that meant multiplying just two numbers.
