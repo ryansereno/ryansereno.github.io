@@ -1,3 +1,7 @@
+---
+aside: true
+---
+
 # Running an LLM on a $2 Microcontroller
 *Memory is all you need!*
 
@@ -243,7 +247,7 @@ After several iterations of deleting and restarting from my basic multiplication
 ![](./assets/matrix-multiply.png)
 This is where I ran into my first concrete roadblock; the one that I understood most easily from the beginning: The atmega328p has 2kB of RAM/ volatile memory.
 
-This means it can hold a theoretical maximum of 2048 int8 values, or about one 45x45 int8 matrix. 
+This means it can hold a theoretical maximum of 2048 int8 values, or just one 45x45 int8 matrix. 
 
 Mat-Mult requires allocation for 3 matrices, the third being int16 or int32 (because mat-mult of large int8 matrices could result in numbers higher than 32,768), so the maximum allowable dimension for each matrix is quite small.
 
