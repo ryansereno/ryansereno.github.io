@@ -285,19 +285,21 @@ just for the Q matrix!
 
 I will probably eventually need to implement some type of chunking scheme to reduce the read/write ops
 
-Aside:
+::: info Sidenote:
 
 I had hoped to implement the SD card communication from scratch like I did with the UART communication, but it appears to be a bit more complicated.
 
 Bringing in the arduino SD library would be simpler, but it is leading to a web of other arduino dependencies which I really do not want to bring into this project.
 
 The SD library provides very helpful methods like seek(), so I think it will be indispensable to this project, I just need to get it compiled with avr-gcc/ working outside of the arduino IDE ecosystem
+:::
 
-Aside 2:
+::: info Sidenote 2:
 
 Interesting note, the SD card library provides these convenient methods- seek(), read(), and write()- that appear to operate on linear chunks of memory, but actually operate through a "Flash Translation Layer" on the SD card.
 
 This abstraction layer translates logical memory addresses to random physical locations on the flash memory, spreading out writes across the card, preventing any one area from wearing out prematurely
+:::
 
 It turns out, using the arduino SD card library outside of the arduino ecosystem is impractical, there are just too many extraneous dependencies.
 
