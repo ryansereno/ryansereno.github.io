@@ -20,7 +20,7 @@ But I wanted to take this as far as possible so I could understand, at a fundame
 - Running modern LLM's, even the smallest ones, requires a generous amount of memory, typically on the order of 10's of GB's
 - The ATmega328P is a $2 chip, with 2KB of memory (0.00000025 GB)
 - While the Atmega has none of the parallelism or multi-threading that modern GPU's and CPU's have, it is perfectly capable of performing basic integer math
-- Roughly analogous to how RAM works GPU's and CPU's, the working memory of the ATmega can be expanded with an SD card
+- Roughly analogous to how RAM works in GPU's and CPU's, the working memory of the ATmega can be expanded with an SD card
 - Getting an entire LLM running on this chip is infeasible, but I did succeed in implementing basic Self-Attention calculations on the chip
 :::
 ## Part 1: Setting up a math validation tool
