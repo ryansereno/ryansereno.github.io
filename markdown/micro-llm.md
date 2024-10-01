@@ -15,8 +15,9 @@ But I wanted to take this as far as possible so I could understand, at a fundame
 ::: info Overview
 - Running modern LLM's, even the smallest ones, requires a generous amount of memory, typically on the order of 10's of GB's
 - The ATmega328P is a $2 chip, with 2KB of memory (0.00000025 GB)
-- While the Atmega has none of the parallelism or multi-threading that modern GPU's and CPU's, it is perfectly capable of performing basic integer math
-- Roughly similar to how RAM works in computers and GPU's, we can expand the working memory of the ATmega with an SD card
+- While the Atmega has none of the parallelism or multi-threading that modern GPU's and CPU's have, it is perfectly capable of performing basic integer math
+- Roughly analogous to how RAM works GPU's and CPU's, the working memory of the ATmega can be expanded with an SD card
+- Getting an entire LLM running on this chip is infeasible, but I did succeed in implementing basic Self-Attention calculations on the chip
 :::
 ## Part 1: Setting up a math validation tool
 I wanted to start simple to see what math I could feasibly do on the chip; that meant multiplying just two numbers.
@@ -252,7 +253,7 @@ In my naive outlook, there isn't anything *fundamentally* different about volati
 
 Sure there are many differences in speed and how data is accessed, but I felt I could at least implement a toy example for my own curiosity.
 ## Part 3: Memory Offloading
-My next goal was to scale the mat-mult as far as I could using memory offloading; and maybe even simulate the first mat-mult operation of a small Phi model 😅 
+My next goal was to scale the mat-mult as far as I could using memory offloading; and maybe even simulate the first mat-mult operation of a small Llama model.
 
 I intended on storing runtime memory on an SD card, so I can handle very large matrices.
 
@@ -305,7 +306,9 @@ It turns out, using the arduino SD card library outside of the arduino ecosystem
 
 So I had to resort to using the arduino-cli instead of avr-gcc
 
-But I successfully setup the SD card and got basic multiplication working. Now to load in some large matrices
+But I successfully setup the SD card and got basic multiplication working.
+Now to load in some large matrices
+## Part 4: Attention Layer
 ### A note on quantization
 >Typically only the weights that participate in matmuls are quantized. All the other parameters (e.g. especially the scale and bias in RMSNorm) are kept in float32, because these layers are very sensitive. Here, we go one step further and additionally quantize the activations in the forward pass. This requires us to dynamically quantize and dequantize between float32 and int8 at runtime, which adds overhead. But the benefit is that now the majority of the calculations are using pure integer arithmetic.
 >
