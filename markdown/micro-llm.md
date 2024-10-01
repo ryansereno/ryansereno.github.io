@@ -15,7 +15,7 @@ But I wanted to take this as far as possible so I could understand, at a fundame
 
 >“What I cannot build, I do not understand” -Feynman
 
-![](./assets/Signal%20Note%20to%20Self%20-%202024-09-05%2008_15_12.jpeg)
+![](assets/atmega-llm.png)
 ::: info Overview
 - Running modern LLM's, even the smallest ones, requires a generous amount of memory, typically on the order of 10's of GB's
 - The ATmega328P is a $2 chip, with 2KB of memory (0.00000025 GB)
@@ -260,6 +260,8 @@ Sure there are many differences in speed and how data is accessed, but I felt I 
 My next goal was to scale the mat-mult as far as I could using memory offloading; and maybe even simulate the first mat-mult operation of a small Llama model.
 
 I intended on storing runtime memory on an SD card, so I can handle very large matrices.
+
+![](./assets/Signal%20Note%20to%20Self%20-%202024-09-05%2008_15_12.jpeg)
 
 I found several possible approaches to this- There is the very impractical approach of writing directly at the block level, in 512 byte chunks, with something like the SDFat library.
 

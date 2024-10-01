@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "about.md",
+                "file": "micro-llm.md",
                 "mode": "source",
                 "source": false
               }
@@ -110,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "about.md",
+                "file": "micro-llm.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "about.md",
+                "file": "micro-llm.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "about.md"
+                "file": "micro-llm.md"
               }
             }
           }
@@ -173,8 +173,9 @@
   },
   "active": "2f1e70c837d7314f",
   "lastOpenFiles": [
-    "micro-llm.md",
+    "assets/atmega-llm.png",
     "about.md",
+    "micro-llm.md",
     "my-curated-vim-command-collection.md",
     "political-optimization.md",
     "assets/Screenshot 2024-09-08 at 1.16.39 PM.png",
