@@ -1,9 +1,16 @@
 # About
 
-Organic chemist turned software engineer.  
-I build software because it's too expensive to have a fully stocked genetics lab in my house.
+Some things I believe:
+- Most disciplines (from the natural sciences to the arts) are burdened by needless complexity
+	- The Design, Terminology, and Pedagogy of these disciplines are intentionally made complex in order to make the practitioners appear smarter
+- Learning is the second most important skill you can develop in life
+	- It's a super power to be able to repeatedly and reliably explore, triangulate, and understand new disciplines 
+- Gratitude is the *most* important skill
 
-I'm primarily interested in proteomics/ enzymology, language modeling, hardware, and robotics.
+Organic chemist turned software engineer.  
+I build software mostly because it's too expensive to have a fully stocked genetics lab in my house.
+
+I'm primarily interested in proteomics/ enzymology, machine learning, language modeling, hardware, and robotics.
 
 I joined <img src="https://portfolio.ryansereno.com/static/media/sparc_logo.0195edfb5e2925dc2f17.png" alt="SPARC logo" style="height: 1.5em; vertical-align: middle; display: inline;"> in 2017 to design their GMP manufacturing laboratory and data pipelines.
 In 2019, I began building Quartet <img src="https://portfolio.ryansereno.com/static/media/Quartet%20logo%20small.89a666cf503945a18a91.jpeg" alt="Quartet logo" style="height: 1.5em; vertical-align: middle; display: inline; border-radius:5px;">, paving the way for standardized medical cannabis testing data in California.

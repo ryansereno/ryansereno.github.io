@@ -4,47 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "2548528e6348b75a",
+        "id": "85b918354fd94b97",
         "type": "tabs",
         "children": [
           {
-            "id": "3faf601d3740a5b1",
+            "id": "cafc6d3354c2b750",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "intellectual-property.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "35452178c6974059",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "micro-llm.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "2f1e70c837d7314f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "micro-llm.md",
+                "file": "about.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -110,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "micro-llm.md",
+                "file": "about.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "micro-llm.md",
+                "file": "about.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "micro-llm.md"
+                "file": "about.md"
               }
             }
           }
@@ -171,15 +146,15 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "2f1e70c837d7314f",
+  "active": "cafc6d3354c2b750",
   "lastOpenFiles": [
+    "intellectual-property.md",
+    "micro-llm.md",
     "assets/atmega-llm.png",
     "about.md",
-    "micro-llm.md",
     "my-curated-vim-command-collection.md",
     "political-optimization.md",
     "assets/Screenshot 2024-09-08 at 1.16.39 PM.png",
-    "intellectual-property.md",
     "assets/Signal Note to Self - 2024-09-05 08_15_12.jpeg",
     "assets/matrix-multiply.png",
     "pytorch.md",
