@@ -1,5 +1,7 @@
 ---
 aside: true
+title: Running an LLM on a $2 Microcontroller 
+image: /assets/atmega-llm.png
 ---
 
 # Running an LLM on a $2 Microcontroller
