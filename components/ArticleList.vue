@@ -43,6 +43,7 @@ const categories = {
           {{ feature.title }}
           <!-- Uncomment if you want to display tags as badges -->
           <!-- <Badge v-for="tag in feature.tags" :key="tag" type="tip" :text="tag" /> -->
+          <Badge v-if="feature.link === '/micro-llm'" text="New" type="tip" />
         </a>
       </li>
     </ul>
