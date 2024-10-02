@@ -10,10 +10,7 @@ head:
       content: 'article'
   - - meta
     - property: 'og:image'
-      content: 'https://ryansereno.com/assets/atmega-llm.png'
-  - - meta
-    - property: 'og:url'
-      content: 'https://ryansereno.com/micro-llm.html'
+      content: '/assets/atmega-llm.png'
   - - meta
     - property: 'og:description'
       content: 'Memory is all you need!'
