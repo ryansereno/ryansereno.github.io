@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "about.md",
+                "file": "intellectual-property.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "about.md",
+                "file": "intellectual-property.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "about.md",
+                "file": "intellectual-property.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "about.md"
+                "file": "intellectual-property.md"
               }
             }
           }
@@ -148,10 +148,10 @@
   },
   "active": "cafc6d3354c2b750",
   "lastOpenFiles": [
+    "about.md",
     "intellectual-property.md",
     "micro-llm.md",
     "assets/atmega-llm.png",
-    "about.md",
     "my-curated-vim-command-collection.md",
     "political-optimization.md",
     "assets/Screenshot 2024-09-08 at 1.16.39 PM.png",

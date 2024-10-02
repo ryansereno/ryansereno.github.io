@@ -30,6 +30,8 @@ Economists have found IP to have had zero net effect on innovation.
 
 The majority of important medical advancements (xray, penicillin, DNA structure, birth control, etc.) were created without IP protections, along with most art and software.
 
+Justine Haupt has [a great article](https://skysedge.com/philosophy/index.html) touching on this, and open source in general.
+
 AI is bringing about an imminent reckoning with these ideas.
 
 When anyone with a single binary file of just a few GB's can reproduce 'proprietary' art, data, ideas, etc., the notion that this can be stopped via legal means is just unrealistic.
