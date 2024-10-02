@@ -1,10 +1,23 @@
 ---
-aside: true
 title: Running an LLM on a $2 Microcontroller
+description: Memory is all you need!
+head:
+  - - meta
+    - property: 'og:title'
+      content: 'Running an LLM on a $2 Microcontroller'
+  - - meta
+    - property: 'og:type'
+      content: 'article'
+  - - meta
+    - property: 'og:image'
+      content: 'https://ryansereno.com/assets/atmega-llm.png'
+  - - meta
+    - property: 'og:url'
+      content: 'https://ryansereno.com/micro-llm.html'
+  - - meta
+    - property: 'og:description'
+      content: 'Memory is all you need!'
 ---
-<meta property="og:image" content="https://ryansereno.com/assets/atmega-llm.png">
-<meta name="description" content="Memory is all you need!">
-
 
 # Running an LLM on a $2 Microcontroller
 *Memory is all you need!*
