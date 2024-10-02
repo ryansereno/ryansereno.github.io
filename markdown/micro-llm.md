@@ -11,10 +11,10 @@ head:
       content: 'article'
   - - meta
     - property: 'og:image'
-      content: '/assets/atmega-llm.png'
+      content: 'assets/atmega-llm.png'
   - - meta
     - property: 'og:url'
-      content: '/micro-llm'
+      content: 'micro-llm'
   - - meta
     - property: 'og:description'
       content: 'Memory is all you need!'
