@@ -1,7 +1,16 @@
 ---
 aside: true
-title: Running an LLM on a $2 Microcontroller 
-image: /assets/atmega-llm.png
+title: Running an LLM on a $2 Microcontroller
+head:
+  - - meta
+    - property: 'og:image'
+      content: https://ryansereno.com/assets/atmega-llm.png
+  - - meta
+    - property: 'og:title'
+      content: 'Running an LLM on a $2 Microcontroller'
+  - - meta
+    - property: 'og:description'
+      content: 'Memory is all you need!'
 ---
 
 # Running an LLM on a $2 Microcontroller
