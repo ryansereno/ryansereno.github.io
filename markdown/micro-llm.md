@@ -14,7 +14,7 @@ head:
       content: 'micro-llm'
   - - meta
     - property: 'og:image'
-      content: 'https://ryansereno.com/atmega-llm.png'
+      content: 'assets/atmega-llm.png'
   - - meta
     - property: 'og:description'
       content: 'Memory is all you need!'
@@ -38,21 +38,21 @@ I wanted to take this as far as possible so I could understand, at a fundamental
 ![](assets/atmega-llm.png)
 ::: info Overview
 What:
-- Running modern LLM's, even the smallest ones, requires a generous amount of memory, typically on the order of 10's of GB's
+- Running modern LLM's, even the smallest ones, requires a generous amount of memory, typically on the order of 10's or 100's of GB's
 - The ATmega328P is a $2 chip, with 2KB of memory (0.00000025 GB)
-- The Atmega has none of the parallelism or multi-threading that modern GPU's and CPU's have, but it is perfectly capable of performing basic integer math
+- The Atmega has none of the parallelism or multi-threading that modern GPU's and CPU's have, but it is capable of performing basic integer math
 - Roughly analogous to how RAM works in GPU's and CPU's, I was able to expand the working memory of the ATmega with an SD card
-- Getting an entire LLM running on this chip is infeasible, but I did succeed in implementing basic Self-Attention calculations on the chip
+- Getting an entire LLM running on this chip is infeasible (it would take hours to produce a single token), but I did succeed in implementing Self-Attention calculations on the chip
 
 Why:
-- AI will become prolific and natively embedded in many edge devices
+- AI will become prolific and embedded in many edge devices
 - Many applications are power constrained or do not require a full-fledged operating system to perform tasks
-- Implementing an LLM on such a resource constrained board helped me understand the bare minimum requirements needed for real-world applications
+- Implementing an LLM on such a resource constrained board helped me understand the minimum requirements needed for real-world embedded applications
 :::
 ## Part 1: Setting up a math validation tool
 I wanted to start simple to see what math I could feasibly do on the chip; that meant multiplying just two numbers.
 
-The easiest way to do this was to input numbers to a computer, send to the chip for calculation, get the result back, and validate it against an actual math library.
+The easiest way to do this was to input numbers to a computer, send to the chip for calculation, get the result back, and validate it the result.
 
 I did this through a basic python client, and serial communication.
 
