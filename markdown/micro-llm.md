@@ -13,15 +13,13 @@ head:
     - property: 'og:url'
       content: 'micro-llm'
   - - meta
+    - property: 'og:image'
+      content: 'https://ryansereno.com/atmega-llm.png'
+  - - meta
     - property: 'og:description'
       content: 'Memory is all you need!'
 ---
 
-<script setup>
-import socialPreview from './assets/atmega-llm.png'
-
-</script>
-<meta property="og:image" content={socialPreview} />
 
 # Running an LLM on a $2 Microcontroller
 *Memory is all you need!*
