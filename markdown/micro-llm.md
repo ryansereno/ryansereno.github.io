@@ -27,9 +27,10 @@ head:
 
 I took a weekend and tried to get an LLM running on an 8bit microcontroller- the ATmega328p in particular.
 
-This was of course an exercise in futility that turned into a simpler ambition of getting matrix multiplication working on the chip
+This was of course an exercise in futility that turned into a simpler ambition of getting the self-attention math working on the chip
+It ballooned into several weeks of researching matrix multiplication kernels, quantization, and solid state memory.
 
-But I wanted to take this as far as possible so I could understand, at a fundamental level, what the minimum resources are to run one of these models.
+I wanted to take this as far as possible so I could understand, at a fundamental level, what the minimum resources are to run one of these models.
 
 >“What I cannot build, I do not understand” -Feynman
 
