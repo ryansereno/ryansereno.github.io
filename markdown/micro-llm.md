@@ -11,7 +11,7 @@ head:
       content: 'article'
   - - meta
     - property: 'og:image'
-      content: 'atmega-llm.png'
+      content: '/atmega-llm.png'
   - - meta
     - property: 'og:url'
       content: 'micro-llm'
