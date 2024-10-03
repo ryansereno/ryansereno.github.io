@@ -43,9 +43,9 @@ What:
 - Roughly analogous to how RAM works in GPU's and CPU's, I was able to expand the working memory of the ATmega with an SD card
 - Getting an entire LLM running on this chip is infeasible, but I did succeed in implementing basic Self-Attention calculations on the chip
 Why:
-- AI will become prolific and natively embedded in most devices
+- AI will become prolific and natively embedded in many edge devices
 - Many applications are power constrained or do not require a full-fledged operating system to perform tasks
-- Implementing an LLM on such a resource constrained board helps understand the bare minimum requirements needed for real-world applications
+- Implementing an LLM on such a resource constrained board helped me understand the bare minimum requirements needed for real-world applications
 :::
 ## Part 1: Setting up a math validation tool
 I wanted to start simple to see what math I could feasibly do on the chip; that meant multiplying just two numbers.
