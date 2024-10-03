@@ -18,7 +18,7 @@ head:
 ---
 
 <script setup>
-import socialPreview from './atmega-llm.png'
+import socialPreview from './assets/atmega-llm.png'
 
 </script>
 <meta property="og:image" content={socialPreview} />
