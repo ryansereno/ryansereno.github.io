@@ -173,7 +173,7 @@ For the sake of simplicity, I flattened 2D matrices into 1D arrays.
 
 This enabled memory to be easily allocated and accessed in contiguous blocks.
 
-Indexing into a value can be done with with: `matrix[i * size + k]` Where `i` is the row index, `size` is the column dimension, and `k` is the column index
+Indexing into a value can be done with: `matrix[i * size + k]` Where `i` is the row index, `size` is the column dimension, and `k` is the column index
 
 For the matrix multiplication "kernel'", I used a brute force loop approach, borrowed from [here](https://forum.arduino.cc/t/arduino-matrix-math-library/38123).
 
@@ -286,7 +286,7 @@ Sure there are many differences in speed and how data is accessed, but I felt I 
 ## Part 3: Memory Offloading
 My next goal was to scale the mat-mult as far as I could using memory offloading; and then simulate the first mat-mult operation of a small Llama model.
 
-I intended on storing runtime memory on an SD card, so I can handle very large matrices.
+I intended to store runtime memory on an SD card, so I could handle very large matrices.
 
 ![](./assets/Signal%20Note%20to%20Self%20-%202024-09-05%2008_15_12.jpeg)
 
