@@ -32,7 +32,7 @@ This was of course an exercise in futility that turned into a simpler ambition o
 
 It ballooned into several weeks of researching matrix multiplication kernels, quantization, and solid state memory.
 
-I wanted to take this as far as possible so I could understand, at a fundamental level, what the minimum resources are to run one of these models.
+I wanted to take this as far as possible so I could understand, at a fundamental level, what minimum resources are required to run one of these models.
 
 >“What I cannot build, I do not understand” -Feynman
 
