@@ -337,7 +337,70 @@ This abstraction layer translates logical memory addresses to random physical lo
 :::
 
 
-## Part 4: Attention Layer
+## Part 4: Calculating Q,K,V
+
+The full scheme looks like this:
+
+```c
+void mat_mul(File &A, File &B, File &C, uint16_t rows_A, uint16_t cols_A, uint16_t cols_B) {
+  int8_t a_val, b_val;
+  int32_t product;
+  File temp = SD.open("temp.bin", FILE_WRITE);
+  
+  for (uint16_t i = 0; i < rows_A; i++) { // for every row of A
+    for (uint16_t j = 0; j < cols_B; j++) { // for every column of B
+      int32_t sum = 0;
+      for (uint16_t k = 0; k < cols_A; k++) { //for every element in the column
+        A.seek((i * cols_A + k) * sizeof(int8_t));
+        B.seek((k * cols_B + j) * sizeof(int8_t));
+        a_val = A.read();
+        b_val = B.read();
+        product = (int32_t)a_val * b_val;
+        sum += product;
+      }
+      temp.write((uint8_t *)&sum, sizeof(int32_t));
+      temp.flush();
+    }
+  }
+  
+  temp.close();
+  
+  SD.remove("temp.bin");
+}
+
+void q_k_v() {
+  File Qw = SD.open("Qw.BIN", FILE_READ);
+  File Embed = SD.open("EMBED.BIN", FILE_READ);
+  File Q = SD.open("Q.BIN", FILE_WRITE);
+  
+  mat_mul(Qw, Embed, Q, MATRIX_SIZE, MATRIX_SIZE, SEQUENCE_LENGTH);
+  
+  Qw.close();
+  Embed.close();
+  Q.close();
+
+  File Kw = SD.open("Kw.BIN", FILE_READ);
+  File Embed = SD.open("EMBED.BIN", FILE_READ);
+  File K = SD.open("K.BIN", FILE_WRITE);
+  
+  mat_mul(Kw, Embed, K, MATRIX_SIZE, MATRIX_SIZE, SEQUENCE_LENGTH);
+  
+  Kw.close();
+  Embed.close();
+  K.close();
+
+  File Vw = SD.open("Vw.BIN", FILE_READ);
+  File Embed = SD.open("EMBED.BIN", FILE_READ);
+  File V = SD.open("V.BIN", FILE_WRITE);
+
+  mat_mul(Vw, Embed, V, MATRIX_SIZE, MATRIX_SIZE, SEQUENCE_LENGTH);
+
+  Vw.close();
+  Embed.close();
+  V.close();
+}
+
+```
 ### A note on quantization
 >Typically only the weights that participate in matmuls are quantized. All the other parameters (e.g. especially the scale and bias in RMSNorm) are kept in float32, because these layers are very sensitive. Here, we go one step further and additionally quantize the activations in the forward pass. This requires us to dynamically quantize and dequantize between float32 and int8 at runtime, which adds overhead. But the benefit is that now the majority of the calculations are using pure integer arithmetic.
 >
@@ -348,7 +411,27 @@ The ATmega does not have dedicated Floating Point math hardware but can do float
 While matrix multiplication can be broken down into piece-wise operations, there are ops where an entire row or matrix needs to be in memory, like softmax.
 
 ## Closing Thoughts
+
+Out of curiosity, I wanted to see how marge a full LLM instruction set would be.
+
+I compiled [llama2.c](https://github.com/karpathy/llama2.c), a very minimal implementation of llama2 written in pure C, by Andrej Karpathy.
+
+The compiled program binary is 57KB in size.
+
+This exceeds the 35KB of program flash memory that the ATmega has.
+
+Also 57KB is the bare minimum binary size; it doesn't account for all of the special SD memory offloading instructions that would be necessary.
+
+So running a full LLM on the ATmega is not possible, simply from an instruction-set standpoint.
+
+That being said, this *could* be attainable with a more powerful board, like an STM32.
+
+---
+
 My main goal in this project was to better understand the minimum requirements necessary to run state-of-the-art language models.
 
-The biggest insight I gained is that <ins>memory is the only constraint</ins>.
+The biggest insight I gained is that <ins>memory, both flash and volatile, is the only real constraint</ins>.
+
 GPU's perform calculation much faster, but they are not strictly necessary.
+
+This being said, if the full model were to be implemented using this method, it would take many hours to complete one inference cycle, ie producing a single token.
