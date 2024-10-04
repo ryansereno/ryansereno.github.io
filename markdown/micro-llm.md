@@ -412,7 +412,7 @@ While matrix multiplication can be broken down into piece-wise operations, there
 
 ## Closing Thoughts
 
-Out of curiosity, I wanted to see how marge a full LLM instruction set would be.
+Out of curiosity, I wanted to see how large a full LLM instruction set would be.
 
 I compiled [llama2.c](https://github.com/karpathy/llama2.c), a very minimal implementation of llama2 written in pure C, by Andrej Karpathy.
 
