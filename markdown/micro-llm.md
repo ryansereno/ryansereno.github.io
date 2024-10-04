@@ -28,7 +28,8 @@ head:
 
 I took a weekend and tried to get an LLM running on an 8bit microcontroller- the ATmega328p in particular.
 
-This was of course an exercise in futility that turned into a simpler ambition of getting the self-attention math working on the chip
+This was of course an exercise in futility that turned into a simpler ambition of getting the self-attention math working on the chip.
+
 It ballooned into several weeks of researching matrix multiplication kernels, quantization, and solid state memory.
 
 I wanted to take this as far as possible so I could understand, at a fundamental level, what the minimum resources are to run one of these models.
@@ -159,7 +160,7 @@ This enables me to work primarily with signed integers (ranging from -128 to 127
 
 I used the int8 data type and shifted values to be between -128 and 127.
 
-Two number multiplication results can overflow into the 16bit range.
+Two-number multiplication results can overflow into the 16bit range.
 
 ![simple-multiply.png](./assets/simple-multiply.png)
 Once this was working, and the validation tests were passing, I felt comfortable expanding this to matrix multiplication.
@@ -266,7 +267,7 @@ It took several hours of debugging to get this working; the math was wrong every
 
 I really handicapped myself by writing my serial communication from scratch; 
 
-It difficult figuring out if my problems were math, memory management or data transfer related (turns out it was the latter..)
+It was difficult figuring out if my problems were math, memory management or data transfer related (turns out it was the latter..)
 
 After several iterations of rewriting my code and referring back to my basic multiplication example, I finally got my tests to pass on square matrices, and then finally matrices of varying dimensions.
 
@@ -295,7 +296,15 @@ This appears to require a lot of attention to wear-leveling and block management
 
 The more feasible approach is to work with a file system abstraction- simply creating and appending to .txt or .bin files.
 
-To set this up I extracted the first attention head weights (768 , 768 each) from the GPT2 model.
+I had hoped to implement the SD card communication from scratch like I did with the UART communication, but it appeared to be more complicated than I expected.
+
+The SD library provides very helpful methods like seek(), so I it was indispensable to this project.
+
+It turns out, using the arduino SD card library outside of the arduino ecosystem is impractical, there are just too many extraneous dependencies.
+
+So I had to resort to using the arduino-cli instead of avr-gcc
+
+To set up the matrix multiplication, I extracted the first attention head weights (768 , 768 each) from the GPT2 model.
 
 I also created an embedded+normalized token sequence (7 , 768).
 
@@ -320,18 +329,7 @@ I will probably eventually need to implement some type of chunking scheme to red
 
 After some more trial and error, and learning how the arduino SD card library works, I was finally getting correct mat-mul results for the Q matrix.
 
-::: info Sidenote:
-
-I had hoped to implement the SD card communication from scratch like I did with the UART communication, but it appears to be a bit more complicated.
-
-The SD library provides very helpful methods like seek(), so I it was indispensable to this project.
-
-It turns out, using the arduino SD card library outside of the arduino ecosystem is impractical, there are just too many extraneous dependencies.
-
-So I had to resort to using the arduino-cli instead of avr-gcc
-:::
-
-::: info Sidenote 2:
+::: info A note on solid state memory:
 
 Interesting note, the SD card library provides convenient methods- seek(), read(), and write()- that appear to operate on linear chunks of memory, but actually operate through a "Flash Translation Layer" on the SD card.
 
