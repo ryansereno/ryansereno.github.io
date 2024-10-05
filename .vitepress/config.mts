@@ -66,7 +66,8 @@ export default defineConfig({
 
     // Open Graph and X.com (Twitter) tags
     const imagePath = assets.find(file => file.includes(pageData.frontmatter.ogImage || ''));
-    const imageUrl = imagePath ? `https://ryansereno.com${imagePath}` : '';
+    //const imageUrl = imagePath ? `https://ryansereno.com${imagePath}` : 'https://www.notion.so/images/page-cover/rijksmuseum_mignons_1660.jpg';
+    const imageUrl = imagePath
     
     const metaTags = [
       // Open Graph tags
