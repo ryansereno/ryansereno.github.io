@@ -65,8 +65,8 @@ export default defineConfig({
     }
 
     // Open Graph and X.com (Twitter) tags
-    const imagePath = assets.find(file => file.includes(pageData.frontmatter.ogImage || 'atmega-llm'));
-    const imageUrl = imagePath ? `https://ryansereno.com/${imagePath}` : '';
+    const imagePath = assets.find(file => file.includes(pageData.frontmatter.ogImage || ''));
+    const imageUrl = imagePath ? `https://ryansereno.com${imagePath}` : '';
     
     const metaTags = [
       // Open Graph tags
