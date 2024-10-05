@@ -44,28 +44,31 @@ export default defineConfig({
     ],
     aside: false,
   },
-  transformHead({ assets }) {
+   transformHead({ assets, pageData }) {
+    const headTags = [];
+
+    // Font preloading
     const myFontFile = assets.find(
-      (file) => /ClassicXtraRound-Medium\.\w+\.ttf/,
-    ); // Adjust regex to match .ttf file
+      (file) => /ClassicXtraRound-Medium\.\w+\.ttf/.test(file)
+    );
     if (myFontFile) {
-      return [
-        [
-          "link",
-          {
-            rel: "preload",
-            href: myFontFile,
-            as: "font",
-            type: "font/ttf", // Correct MIME type for TTF fonts
-            crossorigin: "anonymous", // Set appropriate value for crossorigin
-          },
-        ],
-      ];
+      headTags.push([
+        "link",
+        {
+          rel: "preload",
+          href: myFontFile,
+          as: "font",
+          type: "font/ttf",
+          crossorigin: "anonymous",
+        },
+      ]);
     }
-    const imagePath = assets.find(file => file.includes(pageData.frontmatter.ogImage || 'atmega-llm'))
-    const imageUrl = imagePath ? `https://ryansereno.com/${imagePath}` : ''
+
+    // Open Graph and X.com (Twitter) tags
+    const imagePath = assets.find(file => file.includes(pageData.frontmatter.ogImage || 'atmega-llm'));
+    const imageUrl = imagePath ? `https://ryansereno.com/${imagePath}` : '';
     
-    return [
+    const metaTags = [
       // Open Graph tags
       ['meta', { property: 'og:title', content: pageData.frontmatter.ogTitle || pageData.title }],
       ['meta', { property: 'og:type', content: pageData.frontmatter.ogType || 'article' }],
@@ -74,12 +77,16 @@ export default defineConfig({
       ['meta', { property: 'og:description', content: pageData.frontmatter.ogDescription || pageData.description }],
       
       // X.com (Twitter) tags
-      ['meta', { name: 'twitter:card', content: '' }],
+      ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
       ['meta', { name: 'twitter:site', content: '@ry_serene' }],
       ['meta', { name: 'twitter:title', content: pageData.frontmatter.ogTitle || pageData.title }],
       ['meta', { name: 'twitter:description', content: pageData.frontmatter.ogDescription || pageData.description }],
       ['meta', { name: 'twitter:image', content: imageUrl }],
-    ]
+    ];
+
+    headTags.push(...metaTags);
+
+    return headTags;
   }
   },
   vite: {
