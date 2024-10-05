@@ -2,7 +2,7 @@
 aside: true
 title: Running an LLM on a $2 Microcontroller
 description: Memory is all you need!
-ogImage: assets/atmega-llm.png
+ogImage: atmega-llm.png
 ogType: article
 ogUrl: micro-llm
 head:
@@ -17,7 +17,7 @@ head:
       content: 'micro-llm'
   - - meta
     - property: 'og:image'
-      content: 'assets/atmega-llm.png'
+      content: 'atmega-llm.png'
   - - meta
     - property: 'og:description'
       content: 'Memory is all you need!'
