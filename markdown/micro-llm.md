@@ -2,6 +2,9 @@
 aside: true
 title: Running an LLM on a $2 Microcontroller
 description: Memory is all you need!
+ogImage: assets/atmega-llm.png
+ogType: article
+ogUrl: micro-llm
 head:
   - - meta
     - property: 'og:title'

@@ -62,6 +62,25 @@ export default defineConfig({
         ],
       ];
     }
+    const imagePath = assets.find(file => file.includes(pageData.frontmatter.ogImage || 'atmega-llm'))
+    const imageUrl = imagePath ? `https://ryansereno.com/${imagePath}` : ''
+    
+    return [
+      // Open Graph tags
+      ['meta', { property: 'og:title', content: pageData.frontmatter.ogTitle || pageData.title }],
+      ['meta', { property: 'og:type', content: pageData.frontmatter.ogType || 'article' }],
+      ['meta', { property: 'og:image', content: imageUrl }],
+      ['meta', { property: 'og:url', content: `https://ryansereno.com/${pageData.frontmatter.ogUrl || pageData.relativePath}` }],
+      ['meta', { property: 'og:description', content: pageData.frontmatter.ogDescription || pageData.description }],
+      
+      // X.com (Twitter) tags
+      ['meta', { name: 'twitter:card', content: '' }],
+      ['meta', { name: 'twitter:site', content: '@ry_serene' }],
+      ['meta', { name: 'twitter:title', content: pageData.frontmatter.ogTitle || pageData.title }],
+      ['meta', { name: 'twitter:description', content: pageData.frontmatter.ogDescription || pageData.description }],
+      ['meta', { name: 'twitter:image', content: imageUrl }],
+    ]
+  }
   },
   vite: {
     resolve: {
