@@ -44,7 +44,7 @@ export default defineConfig({
     ],
     aside: false,
   },
-   transformHead({ assets, pageData }) {
+   transformHead({ assets, pageData }){
     const headTags = [];
 
     // Font preloading
@@ -87,7 +87,6 @@ export default defineConfig({
     headTags.push(...metaTags);
 
     return headTags;
-  }
   },
   vite: {
     resolve: {
