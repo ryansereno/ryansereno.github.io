@@ -18,9 +18,9 @@ Beliefs that I hold strongly:
 
 ---
 
-I used to be an organic/ analytical chemist, and started building software for my lab.
+Professionally, I'm an organic chemist and software engineer.
 
-Now I build software mostly because it's too expensive to have a fully stocked wet lab in my house.
+Now I mostly just build software, because it's impractical to have a fully stocked wet lab in my house.
 
 I'm primarily interested in proteomics/ enzymology, machine learning, language modeling, hardware, and robotics.
 

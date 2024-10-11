@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "silent-world.md",
+                "file": "about.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "silent-world.md",
+                "file": "about.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "silent-world.md",
+                "file": "about.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "silent-world.md"
+                "file": "about.md"
               }
             }
           }
@@ -161,9 +161,9 @@
   },
   "active": "59a529ef4729ad9a",
   "lastOpenFiles": [
+    "silent-world.md",
     "about.md",
     "the-encyclopedias.md",
-    "silent-world.md",
     "index.md",
     "the-orchard.md",
     "assets/bear2.png",
