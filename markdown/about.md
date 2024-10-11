@@ -2,19 +2,19 @@
 
 Beliefs that I hold strongly:
 
- Learning is the second most important skill you can develop in life
-- It's a superpower to be able to repeatedly and reliably explore, triangulate, and understand new disciplines 
+ - Learning is the second most important skill you can develop in life
+	 - It's a superpower to be able to repeatedly and reliably explore, triangulate, and understand new disciplines 
 
- Gratitude is the *most* important skill
-- Gratitude isn't something that is passively felt during good times, but something that must be actively exercised during challenging times
+ - Gratitude is the *most* important skill
+	 - Gratitude isn't something that is passively felt during good times, but something that must be actively exercised during challenging times
+	 
+- Most disciplines (from the natural sciences to the arts) are burdened by needless complexity
+	 - The Design, Terminology, and Pedagogy of these disciplines are intentionally made complex in order to make the practitioners appear smarter
 
- Most disciplines (from the natural sciences to the arts) are burdened by needless complexity
-- The Design, Terminology, and Pedagogy of these disciplines are intentionally made complex in order to make the practitioners appear smarter
-
- Advertising is truly evil
-- Modern advertising is increasingly subtle, manipulative, and natively embedded.
-- The advertising business model has ruined the modern internet.
-- Every person has a duty to use Ad blockers
+ - Advertising is truly evil
+	 - Modern advertising is increasingly subtle, manipulative, and natively embedded.
+	 - The advertising business model has ruined the modern internet.
+	 - Every person has a duty to use Ad blockers
 
 ---
 
