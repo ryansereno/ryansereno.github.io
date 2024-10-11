@@ -17,6 +17,7 @@ Beliefs that I hold strongly:
 - Every person has a duty to use Ad blockers
 
 I used to be an organic/ analytical chemist, and started building software for my lab.
+
 Now I build software mostly because it's too expensive to have a fully stocked wet lab in my house.
 
 I'm primarily interested in proteomics/ enzymology, machine learning, language modeling, hardware, and robotics.
