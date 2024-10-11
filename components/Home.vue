@@ -39,16 +39,23 @@
 
 <script setup>
 import { useData } from "vitepress";
-import { computed } from "vue";
+import { ref, watch, onMounted } from "vue";
 import ArticleList from "./ArticleList.vue";
 import BearPainting from "../markdown/assets/bear2.png";
 import RabbitPainting from "../markdown/assets/rabbit2.png";
 
 const { frontmatter, isDark } = useData();
 
-const currentImage = computed(() =>
-  isDark.value ? BearPainting : RabbitPainting,
-);
+const currentImage = ref(RabbitPainting);
+
+watch(isDark, (newValue) => {
+  currentImage.value = newValue ? BearPainting : RabbitPainting;
+}, { immediate: true });
+
+// Ensure correct image on initial client-side render
+onMounted(() => {
+  currentImage.value = isDark.value ? BearPainting : RabbitPainting;
+});
 </script>
 
 <style scoped>
