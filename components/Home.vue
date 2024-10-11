@@ -4,16 +4,21 @@
       <div class="hero">
         <p style="line-height: 36px">
           I write about software, machine learning
-          <img
-            style="height: 24px; display: inline; vertical-align: middle"
-            alt="loss-gradient"
-            src="../markdown/assets/loss-gradient.png"
-          />, art
-          <img
-            style="height: 30px; display: inline; vertical-align: middle"
-            alt="framed-painting"
-            src="../markdown/assets/framed-painting.png"
-          />,
+          <span style="white-space: nowrap">
+            <img
+              style="height: 24px; display: inline; vertical-align: middle"
+              alt="loss-gradient"
+              src="../markdown/assets/loss-gradient.png"
+            />,
+          </span>
+          <span style="white-space: nowrap">
+            art
+            <img
+              style="height: 30px; display: inline; vertical-align: middle"
+              alt="framed-painting"
+              src="../markdown/assets/framed-painting.png"
+            />,
+          </span>
           <span style="font-family: cursive">poetry,</span>
           and frugality.
         </p>
