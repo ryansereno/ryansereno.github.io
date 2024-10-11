@@ -70,4 +70,7 @@ features:
   - title: Intellectual Property Is Dead
     link: /intellectual-property
     tags: [other]
+  - title: The Silence of the World (draft)
+    link: /silenct-world
+    tags: [poetry]
 ---

@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "59a529ef4729ad9a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "silent-world.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "about.md",
+                "file": "silent-world.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "about.md",
+                "file": "silent-world.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "about.md"
+                "file": "silent-world.md"
               }
             }
           }
@@ -146,13 +159,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "cafc6d3354c2b750",
+  "active": "59a529ef4729ad9a",
   "lastOpenFiles": [
+    "about.md",
+    "the-encyclopedias.md",
+    "silent-world.md",
+    "index.md",
+    "the-orchard.md",
     "assets/bear2.png",
     "assets/rabbit2.png",
     "micro-llm.md",
     "intellectual-property.md",
-    "about.md",
     "assets/atmega-llm.png",
     "my-curated-vim-command-collection.md",
     "political-optimization.md",
@@ -162,7 +179,6 @@
     "pytorch.md",
     "assets/simple-multiply.png",
     "cellular-automata.md",
-    "the-orchard.md",
     "vue-event-bus.md",
     "university.md",
     "universal-function-approximators.md",

@@ -31,25 +31,25 @@ const categories = {
 </script>
 
 <template>
-	<div>
-  <div v-for="(articles, category) in categories" :key="category">
-    <ul class="items">
-      <i :style="{ color: 'gray' }">{{ category }}</i>
-      <li v-for="feature in articles" :key="feature.title" class="item">
-        <a
-          :href="feature.link"
-          rel="noreferrer noopener"
-          style="display: block; width: 100%"
-        >
-          {{ feature.title }}
-          <!-- Uncomment if you want to display tags as badges -->
-          <!-- <Badge v-for="tag in feature.tags" :key="tag" type="tip" :text="tag" /> -->
-          <Badge v-if="feature.link === '/micro-llm'" text="New" type="tip" />
-        </a>
-      </li>
-    </ul>
-    <br />
-  </div>
+  <div>
+    <div v-for="(articles, category) in categories" :key="category">
+      <ul class="items">
+        <i :style="{ color: 'gray' }">{{ category }}</i>
+        <li v-for="feature in articles" :key="feature.title" class="item">
+          <a
+            :href="feature.link"
+            rel="noreferrer noopener"
+            style="display: block; width: 100%"
+          >
+            {{ feature.title }}
+            <!-- Uncomment if you want to display tags as badges -->
+            <!-- <Badge v-for="tag in feature.tags" :key="tag" type="tip" :text="tag" /> -->
+            <Badge v-if="feature.link === '/micro-llm'" text="New" type="tip" />
+          </a>
+        </li>
+      </ul>
+      <br />
+    </div>
   </div>
 </template>
 
