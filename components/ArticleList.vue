@@ -31,6 +31,7 @@ const categories = {
 </script>
 
 <template>
+	<div>
   <div v-for="(articles, category) in categories" :key="category">
     <ul class="items">
       <i :style="{ color: 'gray' }">{{ category }}</i>
@@ -48,6 +49,7 @@ const categories = {
       </li>
     </ul>
     <br />
+  </div>
   </div>
 </template>
 
