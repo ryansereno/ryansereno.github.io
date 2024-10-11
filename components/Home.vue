@@ -41,8 +41,8 @@
 import { useData } from "vitepress";
 import { computed } from "vue";
 import ArticleList from "./ArticleList.vue";
-import BearPainting from "../markdown/assets/bear.jpg";
-import RabbitPainting from "../markdown/assets/rabbit.jpg";
+import BearPainting from "../markdown/assets/bear2.png";
+import RabbitPainting from "../markdown/assets/rabbit2.png";
 
 const { frontmatter, isDark } = useData();
 
