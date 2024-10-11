@@ -71,6 +71,6 @@ features:
     link: /intellectual-property
     tags: [other]
   - title: The Silence of the World (draft)
-    link: /silenct-world
+    link: /silent-world
     tags: [poetry]
 ---
