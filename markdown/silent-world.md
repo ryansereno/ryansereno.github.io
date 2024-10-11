@@ -2,7 +2,7 @@
 aside: false
 ---
 
-<h1 align="center">The Encyclopedias</h1>
+<h1 align="center">The Silence of the World</h1>
 
 <span class="dropcap">E</span>lisa, was stoic and said little.  
 
