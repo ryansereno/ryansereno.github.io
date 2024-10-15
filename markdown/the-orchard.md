@@ -24,7 +24,7 @@ She could not understand why so much beautiful land could not be shared. She lea
 
 ~
 
-The land would often fall into intensive drought. The ground would become so dry that the soil would peel into complex patterns that would turn to dust under foot.
+The land would often fall into intense drought. The ground would become so dry that the soil would peel into complex patterns that would turn to dust under foot.
 
 On some days, when the wind from the mountains was strong, the dust would kick up, shrouding the fields in a golden eye irritating cloud. If she ventured outside,  she could see only  few feet in front of her. 
 
