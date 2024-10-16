@@ -2,7 +2,7 @@
 aside: true
 ---
 
-# My Curated 𝑽im Command Collection
+<h1 align="center">My Curated 𝑽im Command Collection</h1>
 
 
 <p align="center">
