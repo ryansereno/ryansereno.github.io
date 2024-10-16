@@ -1,4 +1,4 @@
-# About
+<h1 align="center">About</h1>
 
 Beliefs that I hold strongly:
 

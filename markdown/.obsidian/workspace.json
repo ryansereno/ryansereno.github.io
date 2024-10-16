@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "my-curated-vim-command-collection.md",
+                "file": "micro-llm.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "my-curated-vim-command-collection.md",
+                "file": "micro-llm.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "my-curated-vim-command-collection.md",
+                "file": "micro-llm.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "my-curated-vim-command-collection.md"
+                "file": "micro-llm.md"
               }
             }
           }
@@ -161,10 +161,10 @@
   },
   "active": "59a529ef4729ad9a",
   "lastOpenFiles": [
+    "about.md",
     "the-orchard.md",
     "my-curated-vim-command-collection.md",
     "micro-llm.md",
-    "about.md",
     "silent-world.md",
     "assets/bear2.png.sb-a8775687-cbL8eB",
     "assets/rabbit2.png.sb-a8775687-iF0oUW",
