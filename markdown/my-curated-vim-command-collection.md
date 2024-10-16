@@ -14,7 +14,8 @@ Date: August 30, 2022
 >Where once there were disorderly rows of dialogue and description, now lies carefully tended prose, rooted by deft keystrokes.
 >The ':w' command rings out like a foreman's whistle, saving the day's toil.
 >And lo, the great migration of paragraphs, from chapter to chapter, leaves this writer as dizzy as a field hand after a long day's harvest."
->- John Steinbeck
+>
+>John Steinbeck
 ## **Recording and Repeating Commands**
 
 - **Record a sequence**: `q n {command sequence} q`
