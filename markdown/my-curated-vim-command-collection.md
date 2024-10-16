@@ -20,7 +20,7 @@ aside: true
 >And lo, the great migration of paragraphs, from chapter to chapter, leaves this writer as dizzy as a field hand after a long day's harvest."
 >
 >
->John Steinbeck
+>-John Steinbeck
 ## **Recording and Repeating Commands**
 
 - **Record a sequence**: `q n {command sequence} q`
