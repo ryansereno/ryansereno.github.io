@@ -19,7 +19,7 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: "About", link: "/about" },
-      //{ text: "Examples", link: "/markdown-examples" },
+      { text: "Museum", link: "/museum" },
     ],
 
     sidebar: [
@@ -44,12 +44,12 @@ export default defineConfig({
     ],
     aside: false,
   },
-   transformHead({ assets, pageData }){
+  transformHead({ assets, pageData }) {
     const headTags = [];
 
     // Font preloading
-    const myFontFile = assets.find(
-      (file) => /ClassicXtraRound-Medium\.\w+\.ttf/.test(file)
+    const myFontFile = assets.find((file) =>
+      /ClassicXtraRound-Medium\.\w+\.ttf/.test(file),
     );
     if (myFontFile) {
       headTags.push([
@@ -65,24 +65,64 @@ export default defineConfig({
     }
 
     // Open Graph and X.com (Twitter) tags
-    const imagePath = assets.find(file => file.includes(pageData.frontmatter.ogImage || ''));
+    const imagePath = assets.find((file) =>
+      file.includes(pageData.frontmatter.ogImage || ""),
+    );
     //const imageUrl = imagePath ? `https://ryansereno.com${imagePath}` : 'https://www.notion.so/images/page-cover/rijksmuseum_mignons_1660.jpg';
-    const imageUrl = imagePath
-    
+    const imageUrl = imagePath;
+
     const metaTags = [
       // Open Graph tags
-      ['meta', { property: 'og:title', content: pageData.frontmatter.ogTitle || pageData.title }],
-      ['meta', { property: 'og:type', content: pageData.frontmatter.ogType || 'article' }],
-      ['meta', { property: 'og:image', content: imageUrl }],
-      ['meta', { property: 'og:url', content: `https://ryansereno.com/${pageData.frontmatter.ogUrl || pageData.relativePath}` }],
-      ['meta', { property: 'og:description', content: pageData.frontmatter.ogDescription || pageData.description }],
-      
+      [
+        "meta",
+        {
+          property: "og:title",
+          content: pageData.frontmatter.ogTitle || pageData.title,
+        },
+      ],
+      [
+        "meta",
+        {
+          property: "og:type",
+          content: pageData.frontmatter.ogType || "article",
+        },
+      ],
+      ["meta", { property: "og:image", content: imageUrl }],
+      [
+        "meta",
+        {
+          property: "og:url",
+          content: `https://ryansereno.com/${
+            pageData.frontmatter.ogUrl || pageData.relativePath
+          }`,
+        },
+      ],
+      [
+        "meta",
+        {
+          property: "og:description",
+          content: pageData.frontmatter.ogDescription || pageData.description,
+        },
+      ],
+
       // X.com (Twitter) tags
-      ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
-      ['meta', { name: 'twitter:site', content: '@ry_serene' }],
-      ['meta', { name: 'twitter:title', content: pageData.frontmatter.ogTitle || pageData.title }],
-      ['meta', { name: 'twitter:description', content: pageData.frontmatter.ogDescription || pageData.description }],
-      ['meta', { name: 'twitter:image', content: imageUrl }],
+      ["meta", { name: "twitter:card", content: "summary_large_image" }],
+      ["meta", { name: "twitter:site", content: "@ry_serene" }],
+      [
+        "meta",
+        {
+          name: "twitter:title",
+          content: pageData.frontmatter.ogTitle || pageData.title,
+        },
+      ],
+      [
+        "meta",
+        {
+          name: "twitter:description",
+          content: pageData.frontmatter.ogDescription || pageData.description,
+        },
+      ],
+      ["meta", { name: "twitter:image", content: imageUrl }],
     ];
 
     headTags.push(...metaTags);
