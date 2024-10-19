@@ -97,16 +97,27 @@ function selectPainting(painting) {
 }
 .gallery-thumbnails {
   display: flex;
-  justify-content: center;
   gap: 12px;
   overflow-x: auto;
   padding-top: 24px;
+  scrollbar-width: thin;
+  scrollbar-color: gray transparent;
+}
+.gallery-thumbnails::-webkit-scrollbar {
+  height: 6px;
+}
+.gallery-thumbnails::-webkit-scrollbar-thumb {
+  background-color: var(--vp-c-brand);
+  border-radius: 3px;
 }
 .thumbnail {
-  height: 80px;
+  flex: 0 0 auto;
+  height: 100px;
   cursor: pointer;
   border: 2px solid transparent;
   transition: border-color 0.3s ease;
+  display: flex;
+  align-items: center;
 }
 .thumbnail.active {
   border-color: var(--vp-c-brand);
@@ -114,7 +125,7 @@ function selectPainting(painting) {
 .thumbnail img {
   height: 100%;
   width: auto;
-  object-fit: cover;
+  object-fit: contain;
 }
 @media (max-width: 768px) {
   .gallery-main {
