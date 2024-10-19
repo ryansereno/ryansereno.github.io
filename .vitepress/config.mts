@@ -10,14 +10,14 @@ export default defineConfig({
       "meta",
       {
         property: "og:image",
-        content: "/rabbit_small.png",
+        content: "https://www.notion.so/images/page-cover/rijksmuseum_mignons_1660.jpg",
       },
     ],
     [
       "meta",
       {
         property: "twitter:image",
-        content: "/rabbit_small.png",
+        content: "https://www.notion.so/images/page-cover/rijksmuseum_mignons_1660.jpg",
       },
     ],
     ["meta", { property: "og:title", content: "Ryan Sereno" }],
