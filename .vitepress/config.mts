@@ -5,7 +5,40 @@ import { fileURLToPath, URL } from "node:url";
 export default defineConfig({
   title: "Ryan Sereno",
   description: "I write about Software, Art, Poetry, and Frugality",
-  image: "https://www.notion.so/images/page-cover/rijksmuseum_mignons_1660.jpg",
+  head: [
+    [
+      "meta",
+      {
+        property: "og:image",
+        content:
+          "https://www.notion.so/images/page-cover/rijksmuseum_mignons_1660.jpg",
+      },
+    ],
+    [
+      "meta",
+      {
+        property: "twitter:image",
+        content:
+          "https://www.notion.so/images/page-cover/rijksmuseum_mignons_1660.jpg",
+      },
+    ],
+    ["meta", { property: "og:title", content: "Ryan Sereno" }],
+    [
+      "meta",
+      {
+        property: "og:description",
+        content: "I write about Software, Art, Poetry, and Frugality",
+      },
+    ],
+    [
+      "meta",
+      {
+        name: "twitter:card",
+        content:
+          "https://www.notion.so/images/page-cover/rijksmuseum_mignons_1660.jpg",
+      },
+    ],
+  ],
   srcDir: "markdown",
   //mpa: true, //super lightweight no js mode
   markdown: {
