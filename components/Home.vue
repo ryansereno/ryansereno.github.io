@@ -32,7 +32,12 @@
       <ArticleList :features="frontmatter.features" />
     </div>
     <div class="right-content">
-      <img :src="currentImage" alt="Painting" class="main-painting" />
+      <img
+        :src="currentImage"
+        alt="Painting"
+        class="main-painting"
+        @click="goToMuseum"
+      />
     </div>
   </div>
 </template>
@@ -43,14 +48,25 @@ import { ref, watch, onMounted } from "vue";
 import ArticleList from "./ArticleList.vue";
 import BearPainting from "../markdown/assets/bear2.png";
 import RabbitPainting from "../markdown/assets/rabbit2.png";
+import { useRouter } from "vitepress";
+
+const router = useRouter();
+
+function goToMuseum() {
+  router.go("/museum");
+}
 
 const { frontmatter, isDark } = useData();
 
 const currentImage = ref(RabbitPainting);
 
-watch(isDark, (newValue) => {
-  currentImage.value = newValue ? BearPainting : RabbitPainting;
-}, { immediate: true });
+watch(
+  isDark,
+  (newValue) => {
+    currentImage.value = newValue ? BearPainting : RabbitPainting;
+  },
+  { immediate: true },
+);
 
 // Ensure correct image on initial client-side render
 onMounted(() => {
@@ -89,6 +105,7 @@ onMounted(() => {
   max-width: 85%;
   height: auto;
   object-fit: contain;
+  cursor: pointer;
 }
 @media (max-width: 768px) {
   .container {
