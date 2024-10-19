@@ -1,1 +1,0 @@
-import{_ as e,c as i,o as t,M as a}from"./chunks/framework.D4geoam_.js";const h=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"about.md","filePath":"about.md"}'),l={name:"about.md"},o=a("",8),n=[o];function s(r,d,p,c,m,u){return t(),i("div",null,n)}const f=e(l,[["render",s]]);export{h as __pageData,f as default};
