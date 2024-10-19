@@ -10,16 +10,14 @@ export default defineConfig({
       "meta",
       {
         property: "og:image",
-        content:
-          "https://www.notion.so/images/page-cover/rijksmuseum_mignons_1660.jpg",
+        content: "/rabbit_small.png",
       },
     ],
     [
       "meta",
       {
         property: "twitter:image",
-        content:
-          "https://www.notion.so/images/page-cover/rijksmuseum_mignons_1660.jpg",
+        content: "/rabbit_small.png",
       },
     ],
     ["meta", { property: "og:title", content: "Ryan Sereno" }],
@@ -34,8 +32,7 @@ export default defineConfig({
       "meta",
       {
         name: "twitter:card",
-        content:
-          "https://www.notion.so/images/page-cover/rijksmuseum_mignons_1660.jpg",
+        content: "summary_large_image",
       },
     ],
   ],
