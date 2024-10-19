@@ -83,7 +83,7 @@ onMounted(() => {
   max-width: 1000px;
   margin: 0 auto;
   padding: 24px;
-  min-height: calc(100vh - 48px); /* Subtract padding from viewport height */
+  min-height: calc(100vh - 64px); 
 }
 .left-content {
   flex: 1;
