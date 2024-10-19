@@ -95,69 +95,69 @@ export default defineConfig({
     }
 
     // Open Graph and X.com (Twitter) tags
-    const imagePath = assets.find((file) =>
-      file.includes(pageData.frontmatter.ogImage || ""),
-    );
-    //const imageUrl = imagePath ? `https://ryansereno.com${imagePath}` : 'https://www.notion.so/images/page-cover/rijksmuseum_mignons_1660.jpg';
-    const imageUrl = imagePath;
+    //   const imagePath = assets.find((file) =>
+    //     file.includes(pageData.frontmatter.ogImage || ""),
+    //   );
+    //   //const imageUrl = imagePath ? `https://ryansereno.com${imagePath}` : 'https://www.notion.so/images/page-cover/rijksmuseum_mignons_1660.jpg';
+    //   const imageUrl = imagePath;
 
-    const metaTags = [
-      // Open Graph tags
-      [
-        "meta",
-        {
-          property: "og:title",
-          content: pageData.frontmatter.ogTitle || pageData.title,
-        },
-      ],
-      [
-        "meta",
-        {
-          property: "og:type",
-          content: pageData.frontmatter.ogType || "article",
-        },
-      ],
-      ["meta", { property: "og:image", content: imageUrl }],
-      [
-        "meta",
-        {
-          property: "og:url",
-          content: `https://ryansereno.com/${
-            pageData.frontmatter.ogUrl || pageData.relativePath
-          }`,
-        },
-      ],
-      [
-        "meta",
-        {
-          property: "og:description",
-          content: pageData.frontmatter.ogDescription || pageData.description,
-        },
-      ],
+    //   const metaTags = [
+    //     // Open Graph tags
+    //     [
+    //       "meta",
+    //       {
+    //         property: "og:title",
+    //         content: pageData.frontmatter.ogTitle || pageData.title,
+    //       },
+    //     ],
+    //     [
+    //       "meta",
+    //       {
+    //         property: "og:type",
+    //         content: pageData.frontmatter.ogType || "article",
+    //       },
+    //     ],
+    //     ["meta", { property: "og:image", content: imageUrl }],
+    //     [
+    //       "meta",
+    //       {
+    //         property: "og:url",
+    //         content: `https://ryansereno.com/${
+    //           pageData.frontmatter.ogUrl || pageData.relativePath
+    //         }`,
+    //       },
+    //     ],
+    //     [
+    //       "meta",
+    //       {
+    //         property: "og:description",
+    //         content: pageData.frontmatter.ogDescription || pageData.description,
+    //       },
+    //     ],
 
-      // X.com (Twitter) tags
-      ["meta", { name: "twitter:card", content: "summary_large_image" }],
-      ["meta", { name: "twitter:site", content: "@ry_serene" }],
-      [
-        "meta",
-        {
-          name: "twitter:title",
-          content: pageData.frontmatter.ogTitle || pageData.title,
-        },
-      ],
-      [
-        "meta",
-        {
-          name: "twitter:description",
-          content: pageData.frontmatter.ogDescription || pageData.description,
-        },
-      ],
-      ["meta", { name: "twitter:image", content: imageUrl }],
-    ];
+    //     // X.com (Twitter) tags
+    //     ["meta", { name: "twitter:card", content: "summary_large_image" }],
+    //     ["meta", { name: "twitter:site", content: "@ry_serene" }],
+    //     [
+    //       "meta",
+    //       {
+    //         name: "twitter:title",
+    //         content: pageData.frontmatter.ogTitle || pageData.title,
+    //       },
+    //     ],
+    //     [
+    //       "meta",
+    //       {
+    //         name: "twitter:description",
+    //         content: pageData.frontmatter.ogDescription || pageData.description,
+    //       },
+    //     ],
+    //     ["meta", { name: "twitter:image", content: imageUrl }],
+    //   ];
 
-    headTags.push(...metaTags);
+    //   headTags.push(...metaTags);
 
-    return headTags;
+    //   return headTags;
   },
   vite: {
     resolve: {
